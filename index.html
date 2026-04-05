@@ -639,6 +639,87 @@ body {
 .cta-dark .cta-title { color: white; }
 .cta-dark .cta-pill { background: rgba(147,197,253,0.12); border-color: rgba(147,197,253,0.3); }
 
+/* ════════════════════════════════════════════
+   TAB 4 — PLAYBOOK
+════════════════════════════════════════════ */
+.playbook { max-width: 900px; margin: 0 auto; padding: 48px 48px 100px; }
+.pb-hero { background: #1A1A1A; border-radius: 14px; padding: 44px; color: white; margin-bottom: 52px; }
+.pb-hero-eye { font-family: var(--mono); font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: #4ade80; margin-bottom: 14px; }
+.pb-hero-h1 { font-family: var(--serif); font-size: 38px; font-weight: 700; line-height: 1.1; margin-bottom: 16px; }
+.pb-hero-h1 em { color: #4ade80; font-style: normal; }
+.pb-hero-p { font-size: 14px; font-weight: 300; opacity: 0.82; line-height: 1.75; max-width: 620px; }
+
+/* SCENARIO CARDS */
+.scenario { background: white; border-radius: 14px; border: 1px solid var(--border); margin-bottom: 24px; overflow: hidden; }
+.scenario-header { padding: 20px 28px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.scenario-header.green  { background: var(--green); color: white; }
+.scenario-header.blue   { background: var(--navy); color: white; }
+.scenario-header.orange { background: var(--orange); color: white; }
+.scenario-header.purple { background: var(--purple); color: white; }
+.scenario-header.gold   { background: #8a6010; color: white; }
+.sc-label { font-family: var(--mono); font-size: 9px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.7; margin-bottom: 6px; }
+.sc-name { font-family: var(--serif); font-size: 22px; font-weight: 700; }
+.sc-amount { font-family: var(--serif); font-size: 32px; font-weight: 700; text-align: right; flex-shrink: 0; }
+.sc-amount span { display: block; font-family: var(--mono); font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; opacity: 0.7; margin-bottom: 4px; }
+.scenario-body { padding: 28px; }
+.sc-context { font-size: 12px; color: var(--ink-lt); line-height: 1.7; margin-bottom: 22px; border-bottom: 1px solid var(--border); padding-bottom: 18px; }
+.sc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+.sc-block { background: var(--cream-d); border-radius: 8px; padding: 16px; }
+.sc-block-title { font-family: var(--mono); font-size: 8.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 10px; }
+.sc-rows { display: flex; flex-direction: column; gap: 8px; }
+.sc-row { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 12px; padding-bottom: 6px; border-bottom: 1px solid rgba(0,0,0,0.05); }
+.sc-row:last-child { border-bottom: none; padding-bottom: 0; }
+.sc-row-label { color: var(--ink-lt); flex: 1; }
+.sc-row-val { font-family: var(--serif); font-weight: 700; color: var(--ink); text-align: right; flex-shrink: 0; }
+.sc-row-val.green { color: var(--green); }
+.sc-row-val.orange { color: var(--orange); }
+.sc-row-val.blue { color: var(--blue); }
+.sc-row-val.gold { color: var(--gold); }
+.sc-row-val.purple { color: var(--purple); }
+.sc-outcome { background: var(--green-lt); border-radius: 8px; padding: 14px 16px; }
+.sc-outcome-title { font-family: var(--mono); font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: var(--green); margin-bottom: 8px; }
+.sc-outcome-body { font-size: 11.5px; color: var(--green-dark); line-height: 1.6; }
+
+/* OPPORTUNITY CARDS */
+.opp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+.opp-card { background: white; border-radius: 10px; border: 1px solid var(--border); border-left: 4px solid var(--green); padding: 22px; }
+.opp-card.blue { border-left-color: var(--blue); }
+.opp-card.orange { border-left-color: var(--orange); }
+.opp-card.purple { border-left-color: var(--purple); }
+.opp-card.gold { border-left-color: var(--gold); }
+.opp-type { font-family: var(--mono); font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 6px; }
+.opp-title { font-family: var(--serif); font-size: 17px; font-weight: 700; color: var(--green); margin-bottom: 8px; }
+.opp-card.blue .opp-title { color: var(--blue); }
+.opp-card.orange .opp-title { color: var(--orange); }
+.opp-card.purple .opp-title { color: var(--purple); }
+.opp-card.gold .opp-title { color: var(--gold); }
+.opp-size { font-family: var(--serif); font-size: 22px; font-weight: 700; color: var(--green); margin-bottom: 8px; }
+.opp-card.blue .opp-size { color: var(--blue); }
+.opp-card.orange .opp-size { color: var(--orange); }
+.opp-body { font-size: 11.5px; color: var(--ink-lt); line-height: 1.6; margin-bottom: 12px; }
+.opp-action { font-size: 11px; font-weight: 600; color: var(--ink); padding: 8px 12px; background: var(--cream-d); border-radius: 6px; }
+
+/* PHASE PLAN */
+.phase-plan { display: flex; flex-direction: column; gap: 0; margin-bottom: 32px; }
+.phase-row { display: grid; grid-template-columns: 160px 1fr; gap: 0; }
+.phase-time { background: var(--green); color: white; padding: 20px 16px; text-align: center; display: flex; flex-direction: column; justify-content: center; border-bottom: 1px solid rgba(255,255,255,0.15); }
+.phase-row:nth-child(2) .phase-time { background: var(--blue); }
+.phase-row:nth-child(3) .phase-time { background: var(--orange); }
+.phase-row:nth-child(4) .phase-time { background: var(--purple); }
+.phase-row:last-child .phase-time { border-bottom: none; }
+.pt-period { font-family: var(--mono); font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; opacity: 0.7; margin-bottom: 5px; }
+.pt-name { font-family: var(--serif); font-size: 14px; font-weight: 700; }
+.phase-content { background: white; border: 1px solid var(--border); border-left: none; padding: 20px 24px; border-bottom: 1px solid var(--border); }
+.phase-row:last-child .phase-content { border-bottom: none; }
+.pc-title { font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 12px; }
+.pc-items { display: flex; flex-direction: column; gap: 6px; }
+.pc-item { display: grid; grid-template-columns: 1fr auto; gap: 12px; font-size: 11.5px; padding: 7px 10px; background: var(--cream-d); border-radius: 6px; align-items: center; }
+.pc-item-label { color: var(--ink-mid); font-weight: 500; }
+.pc-item-val { font-family: var(--serif); font-weight: 700; color: var(--green); font-size: 13px; white-space: nowrap; }
+.pc-item-val.b { color: var(--blue); }
+.pc-item-val.o { color: var(--orange); }
+.pc-item-val.p { color: var(--purple); }
+
 @media print {
   .top-nav, #tab-qualifier { display: none !important; }
   #tab-vision { display: block !important; }
@@ -666,6 +747,7 @@ body {
     <div class="nav-tab active" onclick="switchTab('vision', this)">Vision Document</div>
     <div class="nav-tab" onclick="switchTab('qualifier', this)">LP Qualifier</div>
     <div class="nav-tab" onclick="switchTab('capital', this)">Capital Wave</div>
+    <div class="nav-tab" onclick="switchTab('playbook', this)">Playbook</div>
   </div>
   <div class="nav-right">
     <button class="btn-export" onclick="exportPDF()">
@@ -1656,6 +1738,450 @@ body {
 
 </div>
 </div><!-- end tab-capital -->
+
+
+<!-- ═══════════════════════════════════════
+     TAB 4 — PLAYBOOK
+═══════════════════════════════════════ -->
+<div id="tab-playbook" class="tab-panel">
+<div class="playbook">
+
+  <div class="pb-hero">
+    <div class="pb-hero-eye">Real World Execution</div>
+    <div class="pb-hero-h1">Actual Dollar Scenarios,<br><em>Concrete Plays,</em><br>and a Live Action Plan</div>
+    <div class="pb-hero-p">No more concepts. Every scenario below uses real numbers drawn from verified Ontario and US cannabis market data, real MCA underwriting standards, and real capital structures we can facilitate through SET Ventures, WAVMVMT, and our direct lender relationships. These are the plays we run together.</div>
+  </div>
+
+  <!-- SCENARIOS -->
+  <div class="section">
+    <div class="sec-hdr">
+      <div class="sec-n">01</div>
+      <div class="sec-t">Real Dollar Scenarios</div>
+      <span class="tag to">Five Plays, All Real Numbers</span>
+    </div>
+
+    <!-- SCENARIO A -->
+    <div class="scenario">
+      <div class="scenario-header green">
+        <div>
+          <div class="sc-label">Scenario A, The Rollagram Founding LP Deal</div>
+          <div class="sc-name">Multi-Location Toronto Group, 5 Stores</div>
+        </div>
+        <div class="sc-amount"><span>Total MCA Advance</span>$900,000</div>
+      </div>
+      <div class="scenario-body">
+        <div class="sc-context">A 5-location dispensary group operating in Toronto and the GTA. Combined average monthly revenue of $900,000 across all stores. This is approximately $180,000 per store per month, placing them in the top 20 percent of Ontario operators by volume. They want working capital for a new location build-out and are open to equity participation in Rollagram. This is the primary target profile for the $1M play. Data basis: Ontario average per store $97K to $100K per month (OCS 2024, Headset Dec 2025). A 5-store group at 1.8x the average per store falls within realistic top-tier operator range.</div>
+        <div class="sc-grid">
+          <div class="sc-block">
+            <div class="sc-block-title">The Capital Structure</div>
+            <div class="sc-rows">
+              <div class="sc-row"><div class="sc-row-label">Avg Monthly Revenue (5 stores)</div><div class="sc-row-val green">$900,000</div></div>
+              <div class="sc-row"><div class="sc-row-label">MCA Advance (100% of monthly)</div><div class="sc-row-val green">$900,000</div></div>
+              <div class="sc-row"><div class="sc-row-label">Factor Rate Applied</div><div class="sc-row-val">1.30x</div></div>
+              <div class="sc-row"><div class="sc-row-label">Total Repayment Amount</div><div class="sc-row-val orange">$1,170,000</div></div>
+              <div class="sc-row"><div class="sc-row-label">Cost of Capital (the fee)</div><div class="sc-row-val orange">$270,000</div></div>
+              <div class="sc-row"><div class="sc-row-label">Daily Revenue (900K across 21 days)</div><div class="sc-row-val">$42,857</div></div>
+              <div class="sc-row"><div class="sc-row-label">Daily Holdback (12% of daily)</div><div class="sc-row-val orange">$5,143/day</div></div>
+              <div class="sc-row"><div class="sc-row-label">Est. Repayment Timeline</div><div class="sc-row-val">~7.4 months</div></div>
+              <div class="sc-row"><div class="sc-row-label">Close Time</div><div class="sc-row-val blue">5 to 7 business days</div></div>
+            </div>
+          </div>
+          <div class="sc-block">
+            <div class="sc-block-title">The Deal Split</div>
+            <div class="sc-rows">
+              <div class="sc-row"><div class="sc-row-label">LP Working Capital (their money)</div><div class="sc-row-val gold">$450,000</div></div>
+              <div class="sc-row"><div class="sc-row-label">Rollagram Investment (equity trigger)</div><div class="sc-row-val green">$450,000</div></div>
+              <div class="sc-row"><div class="sc-row-label">LP Receives: Rollagram Equity</div><div class="sc-row-val green">Founding stake, TBD</div></div>
+              <div class="sc-row"><div class="sc-row-label">LP Receives: Mairy Jane Equity</div><div class="sc-row-val green">Founding stake, TBD</div></div>
+              <div class="sc-row"><div class="sc-row-label">LP Receives: SET Ventures Capital Advisory</div><div class="sc-row-val blue">Ongoing</div></div>
+              <div class="sc-row"><div class="sc-row-label">LP Receives: Lender Network Access</div><div class="sc-row-val blue">Immediate</div></div>
+              <div class="sc-row"><div class="sc-row-label">LP Receives: Rollagram Platform Priority</div><div class="sc-row-val green">Founding partner</div></div>
+              <div class="sc-row"><div class="sc-row-label">Canada Compliance (s.347)</div><div class="sc-row-val green">Above $500K corp, exempt</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="sc-outcome">
+          <div class="sc-outcome-title">Outcome for All Parties</div>
+          <div class="sc-outcome-body">The LP group uses $450K to fund their 6th location build-out ($300K leasehold improvements plus $150K inventory and staff for opening). They repay $5,143 per day across 7.4 months while generating roughly $42,857 per day across their locations. Net daily cash flow after holdback: $37,714. They are now equity holders in a platform serving their industry. Rollagram receives $450K to fund Phase 1 build. SET Ventures becomes the LP group's capital advisory relationship for their next bridge loan when they target location 7 and 8.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCENARIO B -->
+    <div class="scenario">
+      <div class="scenario-header blue">
+        <div>
+          <div class="sc-label">Scenario B, The High-Volume Single Store</div>
+          <div class="sc-name">Mississauga High-Traffic Dispensary, 1 Location</div>
+        </div>
+        <div class="sc-amount"><span>Total MCA Advance</span>$400,000</div>
+      </div>
+      <div class="scenario-body">
+        <div class="sc-context">A single flagship dispensary in Mississauga. Since Mississauga opened to cannabis retail in April 2023 (per OCS Annual Report 2023-2024), it has become one of the highest-density consumer markets in Ontario outside Toronto. This operator does $400,000 per month, placing them in the top 5 to 10 percent of all Ontario operators. They need capital to build out a second location and want to get onto Rollagram at the founding partner level. A scaled deal at $400K rather than $1M is still a strong play for Rollagram Phase 1.</div>
+        <div class="sc-grid">
+          <div class="sc-block">
+            <div class="sc-block-title">The Capital Structure</div>
+            <div class="sc-rows">
+              <div class="sc-row"><div class="sc-row-label">Avg Monthly Revenue</div><div class="sc-row-val blue">$400,000</div></div>
+              <div class="sc-row"><div class="sc-row-label">MCA Advance (100% of monthly)</div><div class="sc-row-val blue">$400,000</div></div>
+              <div class="sc-row"><div class="sc-row-label">Factor Rate</div><div class="sc-row-val">1.28x</div></div>
+              <div class="sc-row"><div class="sc-row-label">Total Repayment</div><div class="sc-row-val orange">$512,000</div></div>
+              <div class="sc-row"><div class="sc-row-label">Cost of Capital</div><div class="sc-row-val orange">$112,000</div></div>
+              <div class="sc-row"><div class="sc-row-label">Daily Revenue (approx)</div><div class="sc-row-val">$19,048</div></div>
+              <div class="sc-row"><div class="sc-row-label">Daily Holdback (12%)</div><div class="sc-row-val orange">$2,286/day</div></div>
+              <div class="sc-row"><div class="sc-row-label">Est. Repayment</div><div class="sc-row-val">~7.5 months</div></div>
+            </div>
+          </div>
+          <div class="sc-block">
+            <div class="sc-block-title">The Deal Split</div>
+            <div class="sc-rows">
+              <div class="sc-row"><div class="sc-row-label">LP Working Capital</div><div class="sc-row-val gold">$200,000</div></div>
+              <div class="sc-row"><div class="sc-row-label">Rollagram Investment</div><div class="sc-row-val blue">$200,000</div></div>
+              <div class="sc-row"><div class="sc-row-label">Use of LP Capital</div><div class="sc-row-val">Second location deposit and legal</div></div>
+              <div class="sc-row"><div class="sc-row-label">LP Equity</div><div class="sc-row-val blue">Rollagram and Mairy Jane founding stake</div></div>
+              <div class="sc-row"><div class="sc-row-label">Net Daily After Holdback</div><div class="sc-row-val blue">$16,762/day</div></div>
+              <div class="sc-row"><div class="sc-row-label">Canada Compliance</div><div class="sc-row-val orange">Below $500K, 48% APR cap applies. Structure carefully with counsel.</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="sc-outcome">
+          <div class="sc-outcome-title">Outcome and Next Step</div>
+          <div class="sc-outcome-body">This operator uses $200K to secure their second location (AGCO application fees, legal, lease deposit). Rollagram gets $200K toward Phase 1. The LP is now a founding equity partner. In 12 to 18 months when they have two locations running at $600K combined monthly, they are a $600K to $800K MCA candidate and SET Ventures returns for a bridge loan conversation on locations 3 and 4. This is how a $400K deal becomes a 5-year capital relationship.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCENARIO C -->
+    <div class="scenario">
+      <div class="scenario-header orange">
+        <div>
+          <div class="sc-label">Scenario C, The Licensed Producer Play</div>
+          <div class="sc-name">Ontario LP Selling Through OCS, AR Financing</div>
+        </div>
+        <div class="sc-amount"><span>AR Financing Advance</span>$640,000</div>
+      </div>
+      <div class="scenario-body">
+        <div class="sc-context">A licensed producer selling to OCS with $800,000 per month in outstanding purchase orders. OCS pays on 30 to 45 day terms, creating a consistent cash flow gap for production-heavy LPs. Traditional MCA is not the best product here because revenue comes in lumps, not daily card sales. Instead: invoice or accounts receivable financing advances 80 percent of outstanding OCS receivables immediately, with the balance paid on OCS settlement minus a fee. This is a cleaner structure for LPs and avoids any s.347 complexity since it is a sale of receivables, not a loan. The LP can then participate in Rollagram as a founding brand partner.</div>
+        <div class="sc-grid">
+          <div class="sc-block">
+            <div class="sc-block-title">The Capital Structure</div>
+            <div class="sc-rows">
+              <div class="sc-row"><div class="sc-row-label">Monthly OCS Purchase Orders</div><div class="sc-row-val orange">$800,000</div></div>
+              <div class="sc-row"><div class="sc-row-label">AR Advance (80% of receivables)</div><div class="sc-row-val orange">$640,000</div></div>
+              <div class="sc-row"><div class="sc-row-label">Fee per 30 days (2% of invoice)</div><div class="sc-row-val orange">$16,000/month</div></div>
+              <div class="sc-row"><div class="sc-row-label">Balance on OCS Settlement</div><div class="sc-row-val">$160,000 (minus fee)</div></div>
+              <div class="sc-row"><div class="sc-row-label">Effective Annual Cost</div><div class="sc-row-val orange">~24% APR</div></div>
+              <div class="sc-row"><div class="sc-row-label">Close Time</div><div class="sc-row-val blue">5 to 10 business days</div></div>
+              <div class="sc-row"><div class="sc-row-label">Revolving</div><div class="sc-row-val green">Yes, renews monthly as new POs arrive</div></div>
+            </div>
+          </div>
+          <div class="sc-block">
+            <div class="sc-block-title">The Deal Split and LP Value</div>
+            <div class="sc-rows">
+              <div class="sc-row"><div class="sc-row-label">LP Production Scaling Capital</div><div class="sc-row-val gold">$320,000</div></div>
+              <div class="sc-row"><div class="sc-row-label">Rollagram Brand Investment</div><div class="sc-row-val orange">$320,000</div></div>
+              <div class="sc-row"><div class="sc-row-label">LP Gets: Rollagram Brand Profile</div><div class="sc-row-val orange">Visible to 1,829 retailers</div></div>
+              <div class="sc-row"><div class="sc-row-label">LP Gets: Budtender Training Module</div><div class="sc-row-val orange">Direct brand education</div></div>
+              <div class="sc-row"><div class="sc-row-label">LP Gets: Mairy Jane Brand Intros</div><div class="sc-row-val orange">Artist and retailer connections</div></div>
+              <div class="sc-row"><div class="sc-row-label">LP Gets: Equity</div><div class="sc-row-val orange">Rollagram and Mairy Jane founding stake</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="sc-outcome">
+          <div class="sc-outcome-title">Why This Works for an LP</div>
+          <div class="sc-outcome-body">The LP uses $320K to accelerate production for the next OCS quarter, immediately increasing their purchase order volume. More volume means a larger AR advance next cycle. Rollagram gets $320K and the LP gets brand visibility to every one of the 1,829 Ontario retail stores via the platform. Their budtender training module means every CannSell-certified budtender on Rollagram can learn their products directly. SET Ventures stays as the capital advisory relationship for when the LP needs a $2M to $5M bridge for facility expansion.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCENARIO D -->
+    <div class="scenario">
+      <div class="scenario-header purple">
+        <div>
+          <div class="sc-label">Scenario D, The Equipment Play, New Location</div>
+          <div class="sc-name">Dispensary Opening 3rd Location, Equipment Financing</div>
+        </div>
+        <div class="sc-amount"><span>Equipment Loan</span>$185,000</div>
+      </div>
+      <div class="scenario-body">
+        <div class="sc-context">An Ontario operator with 2 existing profitable locations ($280K combined monthly) opening a third. They have enough cash for the lease and staff but need $185K in equipment: POS systems, security and surveillance, HVAC build-out, display shelving, and a delivery vehicle for the new location. Equipment financing is ideal here because the equipment serves as collateral, credit requirements are lower than other products, and the fixed monthly payment is easy to budget against known location revenue. No MCA needed, no equity required. SET Ventures facilitates through equipment finance broker relationships.</div>
+        <div class="sc-grid">
+          <div class="sc-block">
+            <div class="sc-block-title">Equipment Breakdown</div>
+            <div class="sc-rows">
+              <div class="sc-row"><div class="sc-row-label">POS and compliance systems (2 terminals)</div><div class="sc-row-val purple">$28,000</div></div>
+              <div class="sc-row"><div class="sc-row-label">Security and surveillance system</div><div class="sc-row-val purple">$35,000</div></div>
+              <div class="sc-row"><div class="sc-row-label">HVAC and ventilation build-out</div><div class="sc-row-val purple">$42,000</div></div>
+              <div class="sc-row"><div class="sc-row-label">Display cases and shelving</div><div class="sc-row-val purple">$38,000</div></div>
+              <div class="sc-row"><div class="sc-row-label">Delivery vehicle (cannabis-adjacent)</div><div class="sc-row-val purple">$42,000</div></div>
+              <div class="sc-row"><div class="sc-row-label">Total Equipment Financed</div><div class="sc-row-val purple">$185,000</div></div>
+            </div>
+          </div>
+          <div class="sc-block">
+            <div class="sc-block-title">The Loan Structure</div>
+            <div class="sc-rows">
+              <div class="sc-row"><div class="sc-row-label">Loan Amount</div><div class="sc-row-val purple">$185,000</div></div>
+              <div class="sc-row"><div class="sc-row-label">Term</div><div class="sc-row-val">60 months (5 years)</div></div>
+              <div class="sc-row"><div class="sc-row-label">Interest Rate (approx)</div><div class="sc-row-val orange">14% annual</div></div>
+              <div class="sc-row"><div class="sc-row-label">Monthly Payment (approx)</div><div class="sc-row-val orange">$4,299/month</div></div>
+              <div class="sc-row"><div class="sc-row-label">Total Interest Paid</div><div class="sc-row-val orange">~$72,940</div></div>
+              <div class="sc-row"><div class="sc-row-label">Collateral</div><div class="sc-row-val">Equipment only, no RE required</div></div>
+              <div class="sc-row"><div class="sc-row-label">Ownership at End of Term</div><div class="sc-row-val green">Full, no residual</div></div>
+              <div class="sc-row"><div class="sc-row-label">Close Time</div><div class="sc-row-val blue">7 to 12 business days</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="sc-outcome">
+          <div class="sc-outcome-title">Why Equipment Financing, Not MCA</div>
+          <div class="sc-outcome-body">The operator pays $4,299 per month against an expected new location revenue of $120,000 to $180,000 per month once open (based on their existing locations). Net cost is under 3 percent of new location revenue. No daily holdback on card sales, which protects cash flow during the first 90 days when a new location is building its customer base. SET Ventures earns a referral fee from the equipment lender. The operator becomes a SET Ventures relationship client, positioned for an MCA conversation in 6 months when the third location is fully ramped.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCENARIO E: US Play -->
+    <div class="scenario">
+      <div class="scenario-header gold">
+        <div>
+          <div class="sc-label">Scenario E, The US First Entry Play</div>
+          <div class="sc-name">Michigan Multi-Store Operator, Cross-Border Capital</div>
+        </div>
+        <div class="sc-amount"><span>Total MCA Advance USD</span>$750,000</div>
+      </div>
+      <div class="scenario-body">
+        <div class="sc-context">Michigan is described by Cova Software (April 2026) as a national leader in monthly cannabis sales with strong operator profitability due to relatively lower taxes than California. A 4-location Michigan operator doing $750K combined monthly USD is a strong MCA candidate. US cannabis operators also face Section 280E of the federal tax code, which disallows most business deductions, creating massive tax obligations around Q1 and Q2. This operator wants a $750K MCA, with $375K going to cover upcoming 280E federal tax payments and $375K investing into Rollagram as the platform enters US state markets in Phase 2. This positions Rollagram with a Michigan founding partner before the platform officially launches in the US.</div>
+        <div class="sc-grid">
+          <div class="sc-block">
+            <div class="sc-block-title">The Capital Structure (USD)</div>
+            <div class="sc-rows">
+              <div class="sc-row"><div class="sc-row-label">Avg Monthly Revenue (4 Michigan stores)</div><div class="sc-row-val gold">$750,000 USD</div></div>
+              <div class="sc-row"><div class="sc-row-label">MCA Advance (100% of monthly)</div><div class="sc-row-val gold">$750,000 USD</div></div>
+              <div class="sc-row"><div class="sc-row-label">Factor Rate</div><div class="sc-row-val">1.32x</div></div>
+              <div class="sc-row"><div class="sc-row-label">Total Repayment</div><div class="sc-row-val orange">$990,000 USD</div></div>
+              <div class="sc-row"><div class="sc-row-label">Cost of Capital</div><div class="sc-row-val orange">$240,000 USD</div></div>
+              <div class="sc-row"><div class="sc-row-label">Daily Holdback (12% of $35,714)</div><div class="sc-row-val orange">$4,286 USD/day</div></div>
+              <div class="sc-row"><div class="sc-row-label">Est. Repayment</div><div class="sc-row-val">~7.7 months</div></div>
+              <div class="sc-row"><div class="sc-row-label">US Compliance Note</div><div class="sc-row-val">No federal APR cap on MCAs in US. State MCAs are largely unregulated vs loans. Source: FTC, crestmontcapital.com 2026.</div></div>
+            </div>
+          </div>
+          <div class="sc-block">
+            <div class="sc-block-title">The Deal Split and Strategic Value</div>
+            <div class="sc-rows">
+              <div class="sc-row"><div class="sc-row-label">280E Tax Bridge (immediate need)</div><div class="sc-row-val gold">$375,000 USD</div></div>
+              <div class="sc-row"><div class="sc-row-label">Rollagram Phase 2 US Investment</div><div class="sc-row-val gold">$375,000 USD</div></div>
+              <div class="sc-row"><div class="sc-row-label">LP Equity</div><div class="sc-row-val gold">Rollagram US founding partner</div></div>
+              <div class="sc-row"><div class="sc-row-label">Strategic Value</div><div class="sc-row-val gold">First Michigan brand on Rollagram before US launch</div></div>
+              <div class="sc-row"><div class="sc-row-label">Rescheduling Impact</div><div class="sc-row-val green">Trump exec order Dec 2025 to expedite Schedule III. If passed, 280E eliminated, freeing massive cash flow for this operator.</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="sc-outcome">
+          <div class="sc-outcome-title">Why Michigan, Why Now</div>
+          <div class="sc-outcome-body">Michigan operators are among the most profitable in the US due to lower state taxes and high consumer demand. The 280E bridge loan is the single most common capital need for US cannabis operators around tax season. By solving this problem and simultaneously bringing a founding Rollagram partner into Michigan, Rollagram enters the US market with a built-in anchor operator, a real capital relationship through SET Ventures and WAVMVMT lender connections, and a cultural foothold before the platform officially launches in Phase 2 (2027). If rescheduling passes, 280E elimination will free substantial cash flow for this operator, making them an even stronger candidate for a larger bridge loan for locations 5 and 6.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PUBLIC MARKET OPPORTUNITIES -->
+  <div class="section">
+    <div class="sec-hdr">
+      <div class="sec-n">02</div>
+      <div class="sec-t">Public Record Opportunities We Can Move On Now</div>
+      <span class="tag tg">Based on Verified Public Data</span>
+    </div>
+    <div class="opp-grid">
+      <div class="opp-card">
+        <div class="opp-type">AGCO Public Data, Ontario</div>
+        <div class="opp-title">The AGCO Retail Store List</div>
+        <div class="opp-size">1,829 Targets</div>
+        <div class="opp-body">AGCO publishes a complete list of all Authorized Cannabis Store holders in Ontario. This is publicly available. We can identify every multi-location operator (those with 3 or more store authorizations under one entity) and rank them by location count. These are our primary MCA and Rollagram partnership targets. Operators with 4 or more locations are the core $1M play candidates. Source: AGCO.ca, Feb 2026.</div>
+        <div class="opp-action">Action: Pull the AGCO list this week. Filter for multi-location entities. Build the top 50 target list for Darren and Mairy Jane outreach.</div>
+      </div>
+      <div class="opp-card blue">
+        <div class="opp-type">OCS Supplier Database, Public</div>
+        <div class="opp-title">The 619 Active Ontario Brands</div>
+        <div class="opp-size">619 Brand Targets</div>
+        <div class="opp-body">OCS publishes its active supplier list. 619 Ontario active brands, 224 Ontario supplier LPs, 920 LPs Canada-wide. These are all potential Rollagram brand subscription clients at $500 per month, AR financing clients through SET Ventures, and Mairy Jane connection candidates looking for budtender and artist partnerships. Source: OCS Doing Business portal, OCS By the Numbers Report 2023.</div>
+        <div class="opp-action">Action: Download the OCS supplier list. Cross-reference with AGCO multi-location operators. Identify vertically integrated operators who are both LP and retailer, these are highest-value targets.</div>
+      </div>
+      <div class="opp-card orange">
+        <div class="opp-type">Conference Calendar, Public</div>
+        <div class="opp-title">Lift and Co, MJBizCon, Cannabis Business Awards</div>
+        <div class="opp-size">3 Priority Events</div>
+        <div class="opp-body">Lift and Co Cannabis Expo (Canada, annual), MJBizCon (Las Vegas, November), and Cannabis Business Awards are public events where every key operator, LP, brand, and investor in North American cannabis will be in one place. Mairy Jane deployed at these events becomes the Boardy AI of cannabis, connecting operators to capital, artists to growers, and brands to budtenders in real time. These are Rollagram activation moments. Lift and Co typically happens in the spring in Toronto.</div>
+        <div class="opp-action">Action: Confirm Lift and Co 2026 date. Get Rollagram and Mairy Jane registered as exhibitors. Target 20 LP and multi-location operators for Mairy Jane warm intro demos at the event.</div>
+      </div>
+      <div class="opp-card purple">
+        <div class="opp-type">Headset Market Data, Public Summary</div>
+        <div class="opp-title">Ontario Top-Selling Brand Tracker</div>
+        <div class="opp-size">$188.3M December 2025</div>
+        <div class="opp-body">Headset publishes Ontario cannabis market data monthly. December 2025 showed $188.3M in sales, a 6.3 percent month-over-month increase. The brands driving this volume are identifiable through Headset's public data summaries. These high-volume brands are ideal Rollagram brand subscription targets at $500 per month because they already have the revenue to justify the spend and the most to gain from direct budtender education and engagement. Source: Headset.io, Ontario market report Dec 2025.</div>
+        <div class="opp-action">Action: Review Headset Ontario public data. Identify the top 20 brands by market share. Approach for Rollagram brand subscription and Mairy Jane brand-budtender connection program pilot.</div>
+      </div>
+      <div class="opp-card gold">
+        <div class="opp-type">Michigan Public License Data</div>
+        <div class="opp-title">Michigan CRA License Database</div>
+        <div class="opp-size">First US Market Target</div>
+        <div class="opp-body">Michigan Cannabis Regulatory Agency (CRA) publishes all active dispensary and cultivator licenses publicly. Michigan is the US market with the strongest operator profitability profile (Cova Software 2026). We can identify multi-location Michigan groups for the Scenario E $750K US MCA play. US capital access through SET Ventures and WAVMVMT lender network, plus Rollagram Phase 2 US founding partner positioning.</div>
+        <div class="opp-action">Action: Pull Michigan CRA license data. Identify operators with 3 or more retail licenses. Build a target list of 10 for US MCA outreach. These become Rollagram US founding partners before the platform launches in Michigan in Phase 2.</div>
+      </div>
+      <div class="opp-card">
+        <div class="opp-type">Canadian Music and Cannabis Crossover</div>
+        <div class="opp-title">The Artist and Grower Pipeline</div>
+        <div class="opp-size">Mairy Jane Activation</div>
+        <div class="opp-body">The Rollagram deck already positions this as the defining cultural play. Practically: Darren's advertising and branded entertainment network (Rollagram co-founder background) provides the creative and artist connections. WAVMVMT provides the music and movement infrastructure. The OCS supplier list provides the grower targets. Mairy Jane provides the AI-powered double opt-in introduction engine. The first 10 artist-grower collaborations are the proof-of-concept that makes Rollagram the Boardy of cannabis at every conference in 2026.</div>
+        <div class="opp-action">Action: Identify 5 Toronto-area artists open to cannabis brand partnerships. Identify 5 OCS-listed Ontario micro-growers looking for brand identity. Run the first 5 Mairy Jane warm introductions. Document the outcomes as case studies for the Rollagram pitch deck.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACTION PLAN -->
+  <div class="section">
+    <div class="sec-hdr">
+      <div class="sec-n">03</div>
+      <div class="sec-t">The Action Plan, 12 Months</div>
+      <span class="tag tb">Dates and Dollar Milestones</span>
+    </div>
+    <div class="phase-plan">
+      <div class="phase-row">
+        <div class="phase-time">
+          <div class="pt-period">Days 1 to 30</div>
+          <div class="pt-name">Close the First Deal</div>
+        </div>
+        <div class="phase-content">
+          <div class="pc-title">The Rollagram Founding LP. One operator. $500K to $900K MCA. $500K to Rollagram.</div>
+          <div class="pc-items">
+            <div class="pc-item"><div class="pc-item-label">Pull AGCO multi-location list, identify top 20 targets</div><div class="pc-item-val">Week 1</div></div>
+            <div class="pc-item"><div class="pc-item-label">Darren and Shim approach top 5 via warm intro or direct outreach</div><div class="pc-item-val">Week 1 to 2</div></div>
+            <div class="pc-item"><div class="pc-item-label">Present this deck (Vision Document + LP Qualifier + Capital Wave) to first meeting</div><div class="pc-item-val">Week 2</div></div>
+            <div class="pc-item"><div class="pc-item-label">Run LP Qualifier calculator live in the meeting to show their specific numbers</div><div class="pc-item-val">Meeting</div></div>
+            <div class="pc-item"><div class="pc-item-label">SET Ventures submits MCA application to direct lender on the LP's behalf</div><div class="pc-item-val">Day of yes</div></div>
+            <div class="pc-item"><div class="pc-item-label">MCA approved and funded</div><div class="pc-item-val">3 to 7 business days</div></div>
+            <div class="pc-item"><div class="pc-item-label">$450K to $500K wired to Rollagram. Equity agreement signed.</div><div class="pc-item-val">Same week as funding</div></div>
+            <div class="pc-item"><div class="pc-item-label">Capital deployed: Rollagram Phase 1 build begins</div><div class="pc-item-val">$450K to $500K</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="phase-row">
+        <div class="phase-time">
+          <div class="pt-period">Days 30 to 90</div>
+          <div class="pt-name">Build and Launch</div>
+        </div>
+        <div class="phase-content">
+          <div class="pc-title">Phase 1 Rollagram and Mairy Jane live in Canada. First revenue.</div>
+          <div class="pc-items">
+            <div class="pc-item"><div class="pc-item-label">Rollagram MVP: basic profiles, voice posting, brand connections live</div><div class="pc-item-val b">Week 4 to 8</div></div>
+            <div class="pc-item"><div class="pc-item-label">First 100 budtenders onboarded from OCS brand partner networks</div><div class="pc-item-val b">Month 2</div></div>
+            <div class="pc-item"><div class="pc-item-label">First 20 brand subscriptions at $500/month closed</div><div class="pc-item-val b">$10,000/month</div></div>
+            <div class="pc-item"><div class="pc-item-label">Mairy Jane beta: first 10 artist-grower warm intros executed</div><div class="pc-item-val b">Month 2</div></div>
+            <div class="pc-item"><div class="pc-item-label">Second LP conversation started using first LP as case study and proof</div><div class="pc-item-val b">Month 2 to 3</div></div>
+            <div class="pc-item"><div class="pc-item-label">Lift and Co activation: Mairy Jane demo to 50 plus operators at conference</div><div class="pc-item-val b">Spring 2026</div></div>
+            <div class="pc-item"><div class="pc-item-label">Second MCA deal closed (scaled version, $200K to $400K range)</div><div class="pc-item-val b">$200K to $400K</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="phase-row">
+        <div class="phase-time">
+          <div class="pt-period">Days 90 to 180</div>
+          <div class="pt-name">Scale Canada</div>
+        </div>
+        <div class="phase-content">
+          <div class="pc-title">500 budtenders. 50 brands. $25K monthly recurring revenue. Third LP deal.</div>
+          <div class="pc-items">
+            <div class="pc-item"><div class="pc-item-label">Rollagram budtender base reaches 500 active profiles</div><div class="pc-item-val o">Month 4 to 6</div></div>
+            <div class="pc-item"><div class="pc-item-label">Brand subscriptions reach 50 at $500/month</div><div class="pc-item-val o">$25,000/month ARR</div></div>
+            <div class="pc-item"><div class="pc-item-label">First LP's MCA repaying on track (holdback running smoothly)</div><div class="pc-item-val o">Confirmed month 3</div></div>
+            <div class="pc-item"><div class="pc-item-label">Third MCA deal closed, target Ontario LP ($640K AR financing)</div><div class="pc-item-val o">$640,000</div></div>
+            <div class="pc-item"><div class="pc-item-label">SET Ventures bridge loan conversation begins with first LP for location 6 and 7</div><div class="pc-item-val o">$2M to $5M bridge</div></div>
+            <div class="pc-item"><div class="pc-item-label">First artist-grower collab goes public, documented as Mairy Jane case study</div><div class="pc-item-val o">PR moment</div></div>
+            <div class="pc-item"><div class="pc-item-label">Michigan target list finalized for US Phase 2 outreach</div><div class="pc-item-val o">10 targets ready</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="phase-row">
+        <div class="phase-time">
+          <div class="pt-period">Days 180 to 365</div>
+          <div class="pt-name">Enter the US</div>
+        </div>
+        <div class="phase-content">
+          <div class="pc-title">Michigan founding partner closed. US MCA deal done. Rollagram US beta live. MJBizCon activation.</div>
+          <div class="pc-items">
+            <div class="pc-item"><div class="pc-item-label">Michigan founding LP deal closed, $375K to Rollagram US</div><div class="pc-item-val p">Month 7 to 8</div></div>
+            <div class="pc-item"><div class="pc-item-label">Rollagram Phase 2 US beta: Michigan and Illinois operators onboarded</div><div class="pc-item-val p">Month 8 to 10</div></div>
+            <div class="pc-item"><div class="pc-item-label">MJBizCon Las Vegas: Mairy Jane and Rollagram booth, 30 operator meetings</div><div class="pc-item-val p">November 2026</div></div>
+            <div class="pc-item"><div class="pc-item-label">Total Canada ARR (subscriptions plus MJ fees plus events)</div><div class="pc-item-val p">$600K to $1M ARR</div></div>
+            <div class="pc-item"><div class="pc-item-label">Total MCA and capital deals facilitated by SET Ventures and WAVMVMT</div><div class="pc-item-val p">$2M to $4M deployed</div></div>
+            <div class="pc-item"><div class="pc-item-label">SET Ventures bridge loan for first LP location 6 and 7</div><div class="pc-item-val p">$2M to $3M bridge</div></div>
+            <div class="pc-item"><div class="pc-item-label">Annual Rollagram Conference planning begins for 2027</div><div class="pc-item-val p">Q4 2026</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMBINED CAPITAL STACK SUMMARY -->
+  <div class="section">
+    <div class="sec-hdr">
+      <div class="sec-n">04</div>
+      <div class="sec-t">The Capital Stack We Facilitate, Dollar Examples</div>
+      <span class="tag tgold">All Products, All Sizes</span>
+    </div>
+    <div style="background:var(--navy);border-radius:14px;padding:36px;color:white;margin-bottom:24px;">
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#93c5fd;margin-bottom:16px;">Full Capital Stack Summary</div>
+      <div style="font-family:var(--serif);font-size:22px;font-weight:700;margin-bottom:20px;">From $10K to $50M+, every product, real dollar amounts.</div>
+      <div style="display:flex;flex-direction:column;gap:0;">
+        <div style="display:grid;grid-template-columns:160px 1fr 120px 120px;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.08);font-family:var(--mono);font-size:9px;letter-spacing:1.5px;text-transform:uppercase;opacity:0.5;">
+          <div>Product</div><div>How It Works</div><div>Size Range</div><div>Close Time</div>
+        </div>
+        <div style="display:grid;grid-template-columns:160px 1fr 120px 120px;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.08);font-size:12px;">
+          <div style="font-weight:700;color:#4ade80;">MCA (Canada)</div>
+          <div style="font-weight:300;opacity:0.82;">50 to 120 percent of avg monthly deposits. Purchase of future receivables. No APR cap for corporate advances above $500K. Factor 1.1x to 1.5x. Holdback 10 to 20 percent daily. Sources: Merchant Growth, Mehmi Group, Criminal Code s.347.</div>
+          <div style="font-family:var(--serif);font-weight:700;color:#4ade80;">$10K to $2M</div>
+          <div style="color:#93c5fd;">3 to 7 days</div>
+        </div>
+        <div style="display:grid;grid-template-columns:160px 1fr 120px 120px;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.08);font-size:12px;">
+          <div style="font-weight:700;color:#93c5fd;">MCA (US)</div>
+          <div style="font-weight:300;opacity:0.82;">Same structure as Canada. No federal APR cap on MCA in US. Factor 1.1x to 1.5x. 10 to 20 percent holdback on daily card sales. Cannabis-specific lenders: FundCanna, Clarify Capital, United Capital Source, Paybotic. Sources: crestmontcapital.com 2026, Upwise Capital, fundcanna.com.</div>
+          <div style="font-family:var(--serif);font-weight:700;color:#93c5fd;">$10K to $5M</div>
+          <div style="color:#93c5fd;">2 to 5 days</div>
+        </div>
+        <div style="display:grid;grid-template-columns:160px 1fr 120px 120px;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.08);font-size:12px;">
+          <div style="font-weight:700;color:#fbbf24;">Bridge Loans</div>
+          <div style="font-weight:300;opacity:0.82;">Asset-backed, private lenders. Real estate, licenses, and equipment as collateral. Interest only available. SET Ventures specialty: $2M to $25M plus. No rate cap for corporate above $500K Canada (s.347 exempt). Rates 10 to 18 percent. Sources: SET Ventures, HEF Finance, GrowerIQ.</div>
+          <div style="font-family:var(--serif);font-weight:700;color:#fbbf24;">$500K to $25M+</div>
+          <div style="color:#93c5fd;">2 to 8 weeks</div>
+        </div>
+        <div style="display:grid;grid-template-columns:160px 1fr 120px 120px;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.08);font-size:12px;">
+          <div style="font-weight:700;color:#fb923c;">Equipment Loans</div>
+          <div style="font-weight:300;opacity:0.82;">Equipment as collateral. Fixed monthly payments. 24 to 84 month terms. Up to 100 percent of equipment value. Canada: BDC, specialized brokers. US: AmeriCU ($5K to $250K in New York), FundCanna, Clarify Capital. Sources: AmeriCU.org, Clarify Capital, GrowerIQ 2023.</div>
+          <div style="font-family:var(--serif);font-weight:700;color:#fb923c;">$5K to $3M</div>
+          <div style="color:#93c5fd;">5 to 15 days</div>
+        </div>
+        <div style="display:grid;grid-template-columns:160px 1fr 120px 120px;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.08);font-size:12px;">
+          <div style="font-weight:700;color:#c4b5fd;">AR Financing</div>
+          <div style="font-weight:300;opacity:0.82;">Advance on outstanding invoices or OCS purchase orders. 70 to 90 percent advance rate. 1.5 to 4 percent fee per 30 days. Revolving. Ideal for LPs with OCS net 30 to 45 day payment terms. Purchase of receivables, not a loan. Canada primarily. Sources: GrowerIQ Canada, cannabisbusinessfinancing guides.</div>
+          <div style="font-family:var(--serif);font-weight:700;color:#c4b5fd;">$50K to $5M</div>
+          <div style="color:#93c5fd;">5 to 10 days</div>
+        </div>
+        <div style="display:grid;grid-template-columns:160px 1fr 120px 120px;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.08);font-size:12px;">
+          <div style="font-weight:700;color:#4ade80;">Commercial RE</div>
+          <div style="font-weight:300;opacity:0.82;">Private lenders, family offices, cannabis REITs. 55 to 75 percent LTV. US: Innovative Industrial Properties (IIPR) sale-leaseback, Power REIT. Canada: private mortgage brokers, 12 to 18 percent. Structures: first mortgage, mezzanine, construction, sale-leaseback. Sources: IIPR public filings, AmeriCU, Alta Fund 2026.</div>
+          <div style="font-family:var(--serif);font-weight:700;color:#4ade80;">$500K to $50M+</div>
+          <div style="color:#93c5fd;">4 to 12 weeks</div>
+        </div>
+        <div style="display:grid;grid-template-columns:160px 1fr 120px 120px;gap:16px;padding:14px 0;font-size:12px;">
+          <div style="font-weight:700;color:#fbbf24;">280E Bridge (US)</div>
+          <div style="font-weight:300;opacity:0.82;">Short-term advance timed to federal Section 280E tax obligations. 90 to 180 day term. FundCanna, United Capital Source, Clarify Capital specialize in this. Potentially eliminated if rescheduling from Schedule I to Schedule III proceeds. Trump December 2025 executive order to expedite. Sources: mboventures.com Dec 2025, covasoftware.com April 2026.</div>
+          <div style="font-family:var(--serif);font-weight:700;color:#fbbf24;">$50K to $2M</div>
+          <div style="color:#93c5fd;">2 to 5 days</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div><!-- end tab-playbook -->
+
 
 
 

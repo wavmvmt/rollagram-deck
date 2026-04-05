@@ -720,6 +720,75 @@ body {
 .pc-item-val.o { color: var(--orange); }
 .pc-item-val.p { color: var(--purple); }
 
+/* ════════════════════════════════════════════
+   TAB 5 — TARGET INTEL
+════════════════════════════════════════════ */
+.intel { max-width: 960px; margin: 0 auto; padding: 40px 44px 100px; }
+.intel-hero { background: #0F0F0F; border-radius: 14px; padding: 40px; color: white; margin-bottom: 44px; border: 1px solid rgba(255,120,50,0.3); }
+.intel-hero-label { font-family: var(--mono); font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: #ff7733; margin-bottom: 12px; }
+.intel-hero-h1 { font-family: var(--serif); font-size: 36px; font-weight: 700; line-height: 1.1; margin-bottom: 14px; }
+.intel-hero-h1 em { color: #4ade80; font-style: normal; }
+.intel-hero-p { font-size: 13px; font-weight: 300; opacity: 0.8; line-height: 1.75; max-width: 680px; }
+
+/* EDUCATION BLOCKS */
+.edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px; }
+.edu-card { background: white; border-radius: 10px; border: 1px solid var(--border); padding: 22px; }
+.edu-tag { font-family: var(--mono); font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 8px; }
+.edu-title { font-family: var(--serif); font-size: 18px; font-weight: 700; color: var(--green); margin-bottom: 10px; }
+.edu-body { font-size: 12px; color: var(--ink-lt); line-height: 1.7; }
+.edu-body strong { color: var(--ink); font-weight: 600; }
+
+/* QUAL MATRIX TABLE */
+.qual-matrix { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 11.5px; }
+.qual-matrix thead tr { background: #0F0F0F; color: white; }
+.qual-matrix th { padding: 10px 14px; text-align: left; font-family: var(--mono); font-size: 8.5px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 400; }
+.qual-matrix td { padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.qual-matrix tbody tr:nth-child(even) { background: white; }
+.qual-matrix tbody tr:nth-child(odd) { background: var(--cream-d); }
+.qm-product { font-weight: 700; color: var(--ink); font-family: var(--serif); font-size: 13px; }
+.qm-size { font-family: var(--serif); font-weight: 700; color: var(--green); }
+.qm-yes { color: var(--green); font-weight: 700; }
+.qm-no  { color: var(--orange); font-weight: 700; }
+.qm-maybe { color: var(--gold); font-weight: 700; }
+
+/* TARGET LISTS */
+.target-section { margin-bottom: 44px; }
+.target-hdr { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1.5px solid var(--border); }
+.target-hdr-title { font-family: var(--serif); font-size: 18px; font-weight: 700; color: var(--ink); flex: 1; }
+.target-count { font-family: var(--mono); font-size: 9px; letter-spacing: 2px; text-transform: uppercase; padding: 3px 10px; border-radius: 100px; }
+
+.target-cards { display: flex; flex-direction: column; gap: 10px; }
+.target-card { display: grid; grid-template-columns: 220px 1fr auto; gap: 16px; background: white; border-radius: 8px; border: 1px solid var(--border); border-left: 4px solid var(--green); padding: 16px 18px; align-items: start; }
+.target-card.blue   { border-left-color: var(--blue); }
+.target-card.orange { border-left-color: var(--orange); }
+.target-card.purple { border-left-color: var(--purple); }
+.target-card.gold   { border-left-color: var(--gold); }
+.target-card.hot    { border-left-color: #ff4400; background: #fff8f6; }
+
+.tc-name { font-family: var(--serif); font-size: 15px; font-weight: 700; color: var(--ink); margin-bottom: 3px; }
+.tc-sub  { font-size: 10px; color: var(--ink-faint); font-family: var(--mono); letter-spacing: 0.5px; }
+.tc-body { font-size: 11.5px; color: var(--ink-lt); line-height: 1.6; }
+.tc-body strong { color: var(--ink); }
+.tc-action { text-align: right; flex-shrink: 0; min-width: 140px; }
+.tc-score { font-family: var(--serif); font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+.tc-score-label { font-family: var(--mono); font-size: 8px; letter-spacing: 1px; text-transform: uppercase; color: var(--ink-faint); }
+.tc-play { font-size: 10px; padding: 4px 10px; border-radius: 100px; font-weight: 600; display: inline-block; margin-top: 6px; }
+.tc-play.green  { background: var(--green-lt); color: var(--green); }
+.tc-play.blue   { background: var(--blue-lt); color: var(--blue); }
+.tc-play.orange { background: var(--orange-lt); color: var(--orange); }
+.tc-play.hot    { background: #ff4400; color: white; }
+
+/* APRIL 20 COUNTDOWN */
+.deadline-box { background: linear-gradient(135deg, #1a0a00, #3a1000); border-radius: 14px; padding: 32px; color: white; margin-bottom: 32px; border: 1px solid rgba(255,68,0,0.4); }
+.deadline-label { font-family: var(--mono); font-size: 8.5px; letter-spacing: 3px; text-transform: uppercase; color: #ff7733; margin-bottom: 12px; }
+.deadline-h2 { font-family: var(--serif); font-size: 24px; font-weight: 700; margin-bottom: 10px; }
+.deadline-sub { font-size: 13px; font-weight: 300; opacity: 0.82; line-height: 1.7; margin-bottom: 22px; }
+.deadline-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.dg-item { background: rgba(255,255,255,0.07); border-radius: 8px; padding: 14px; border: 1px solid rgba(255,120,50,0.2); }
+.dg-label { font-family: var(--mono); font-size: 8px; letter-spacing: 1.5px; text-transform: uppercase; color: #ff9966; margin-bottom: 6px; }
+.dg-val { font-family: var(--serif); font-size: 18px; font-weight: 700; color: white; margin-bottom: 3px; }
+.dg-note { font-size: 10.5px; font-weight: 300; opacity: 0.7; line-height: 1.4; }
+
 @media print {
   .top-nav, #tab-qualifier { display: none !important; }
   #tab-vision { display: block !important; }
@@ -748,6 +817,7 @@ body {
     <div class="nav-tab" onclick="switchTab('qualifier', this)">LP Qualifier</div>
     <div class="nav-tab" onclick="switchTab('capital', this)">Capital Wave</div>
     <div class="nav-tab" onclick="switchTab('playbook', this)">Playbook</div>
+    <div class="nav-tab" onclick="switchTab('intel', this)" style="background:rgba(255,100,50,0.15);border:1px solid rgba(255,100,50,0.4);color:#ff9977;">Target Intel</div>
   </div>
   <div class="nav-right">
     <button class="btn-export" onclick="exportPDF()">
@@ -2181,6 +2251,409 @@ body {
 
 </div>
 </div><!-- end tab-playbook -->
+
+<!-- ═══════════════════════════════════════
+     TAB 5 — TARGET INTEL
+═══════════════════════════════════════ -->
+<div id="tab-intel" class="tab-panel">
+<div class="intel">
+
+  <div class="intel-hero">
+    <div class="intel-hero-label">Team Intelligence Resource</div>
+    <div class="intel-hero-h1">Everything Your Team Needs to<br><em>Spot Opportunities and Close Deals</em></div>
+    <div class="intel-hero-p">This tab exists so Darren and everyone on the Rollagram, Mairy Jane, SET Ventures, and WAVMVMT team can walk into any conversation, any room, and any meeting with the full picture. How loans actually work, who qualifies, what to look for, and exactly which companies to approach first. All based on public record, verified data, and real market intel as of April 2026.</div>
+  </div>
+
+  <!-- SECTION 1: MCA EDUCATION -->
+  <div class="target-section">
+    <div class="target-hdr">
+      <div class="target-hdr-title">Understanding MCA, Annual vs Monthly (The Full Explanation)</div>
+      <span class="target-count" style="background:var(--green-lt);color:var(--green);">Read This First</span>
+    </div>
+
+    <div style="background:var(--green);color:white;border-radius:12px;padding:28px;margin-bottom:16px;">
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#4ade80;margin-bottom:12px;">The Most Important Thing to Understand</div>
+      <div style="font-family:var(--serif);font-size:20px;font-weight:700;margin-bottom:14px;">Annual revenue tells you if someone qualifies. Monthly revenue tells you how much they get.</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;">
+        <div>
+          <div style="font-family:var(--mono);font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#4ade80;margin-bottom:8px;">Step 1: Annual Revenue = Qualification</div>
+          <div style="font-size:12px;font-weight:300;opacity:0.88;line-height:1.65;">You need at least $500K to $1M annual revenue to be a serious MCA candidate. This tells the lender the business is real, has been running long enough (minimum 6 months), and has enough volume to support a holdback on daily sales. Think of this as the entry exam. You either pass or you do not.</div>
+        </div>
+        <div>
+          <div style="font-family:var(--mono);font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#4ade80;margin-bottom:8px;">Step 2: Monthly Average = The Advance Size</div>
+          <div style="font-size:12px;font-weight:300;opacity:0.88;line-height:1.65;">Once qualified, the actual dollar amount of the advance is calculated against average monthly bank deposits. The lender takes their annual revenue, divides by 12, then offers 50 to 120 percent of that monthly number as the advance. So a $2.4M annual business does $200K per month and qualifies for a $100K to $240K advance. Not more.</div>
+        </div>
+        <div>
+          <div style="font-family:var(--mono);font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#4ade80;margin-bottom:8px;">Step 3: Daily Cash Flow = Repayment Speed</div>
+          <div style="font-size:12px;font-weight:300;opacity:0.88;line-height:1.65;">The advance is repaid by taking 10 to 15 percent of daily card sales or a fixed daily ACH debit until the total repayment (advance times factor rate) is cleared. The lender thinks in daily cash flow, not monthly or annual. The repayment timeline varies based on how busy their days are. Faster sales means faster payoff.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="edu-grid">
+      <div class="edu-card">
+        <div class="edu-tag">The Formula, Written Simply</div>
+        <div class="edu-title">How to Estimate Any Operator's MCA Capacity in 30 Seconds</div>
+        <div class="edu-body">
+          <strong>Step 1:</strong> Ask or estimate their annual revenue.<br><br>
+          <strong>Step 2:</strong> Divide by 12 to get monthly average. Example: $6M annual divided by 12 equals $500K monthly.<br><br>
+          <strong>Step 3:</strong> Multiply monthly by 1.0 to get conservative advance. Multiply by 1.2 to get aggressive. Example: $500K monthly times 1.0 equals $500K advance. Times 1.2 equals $600K.<br><br>
+          <strong>Step 4:</strong> Multiply advance by factor rate to get total repayment. At 1.30x: $500K advance means $650K repayment, so the cost of capital is $150K.<br><br>
+          <strong>Step 5:</strong> Check: can they handle 10 to 12 percent of daily sales being withheld? Daily revenue equals monthly divided by 21 business days. $500K divided by 21 equals $23,809 per day. 12 percent equals $2,857 per day in holdback. If they net $20,952 after holdback and still cover rent, payroll, and inventory, the deal works.
+        </div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-tag">What to Look For When Talking to an Operator</div>
+        <div class="edu-title">The Six Questions That Tell You Everything</div>
+        <div class="edu-body">
+          <strong>1. How many locations do you have?</strong> More locations means higher combined monthly deposits and a stronger MCA profile. 5 plus locations with average monthly revenue per store means a multiply.<br><br>
+          <strong>2. How long have you been open?</strong> Minimum 6 months. Ideally 12 or more. Less than 6 months means they likely cannot get an MCA at all.<br><br>
+          <strong>3. Are you privately owned?</strong> Publicly listed companies (High Tide, SNDL) have public market access and do not need MCAs. Privately held independents are your sweet spot.<br><br>
+          <strong>4. Are you OCS-supplied or direct?</strong> Retailers are better MCA candidates than LPs because they have consistent daily card sales. LPs have lumpy OCS payments, better for AR financing.<br><br>
+          <strong>5. What is your busiest month?</strong> April (420 season), December, and August tend to be peaks in Ontario. A strong operator doing $200K in a slow month might do $280K in April. Lenders look at averages.<br><br>
+          <strong>6. Have you taken an MCA before?</strong> Prior MCA experience is a positive signal. Prior default is a red flag. Stacked MCAs (multiple active at once) are a major warning, avoid operators already over-leveraged.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: ALL LOAN TYPES EXPLAINED -->
+  <div class="target-section">
+    <div class="target-hdr">
+      <div class="target-hdr-title">Every Loan Type Explained with Qualification Criteria</div>
+      <span class="target-count" style="background:var(--blue-lt);color:var(--blue);">Full Reference</span>
+    </div>
+
+    <table class="qual-matrix">
+      <thead>
+        <tr>
+          <th>Loan Type</th>
+          <th>What It Is, Plain English</th>
+          <th>Size Range</th>
+          <th>Who Qualifies</th>
+          <th>Who Does Not Qualify</th>
+          <th>How Fast</th>
+          <th>Cost of Capital</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><div class="qm-product">MCA</div><div style="font-size:10px;color:var(--ink-faint);">Merchant Cash Advance</div></td>
+          <td>You sell your future card sales at a discount in exchange for cash today. Not technically a loan. The lender takes a percentage of your daily card transactions until the agreed repayment amount is fully collected. No fixed term.</td>
+          <td><span class="qm-size">$10K to $2M</span><div style="font-size:10px;color:var(--ink-faint);">50 to 120% of avg monthly deposits</div></td>
+          <td><span class="qm-yes">YES:</span> 6+ months operating, $40K+ per month revenue, consistent card transactions, cannabis retailers, dispensaries, multi-location groups</td>
+          <td><span class="qm-no">NO:</span> Under 6 months old, less than $40K per month, publicly listed companies, already stacked with multiple active MCAs, no card payment processor</td>
+          <td>3 to 7 business days</td>
+          <td>Factor rate 1.10x to 1.50x. No interest rate quoted. For a $200K advance at 1.30x, you repay $260K. Cost is $60K. Source: Lending Valley, Upwise Capital, Mehmi Group 2026.</td>
+        </tr>
+        <tr>
+          <td><div class="qm-product">AR Financing</div><div style="font-size:10px;color:var(--ink-faint);">Invoice or Receivables</div></td>
+          <td>You have invoices or purchase orders that will be paid in 30 to 45 days. A lender advances 70 to 90 percent of that invoice value today. When your customer pays, the lender takes their fee and sends you the balance. Revolving facility, reneweds every cycle.</td>
+          <td><span class="qm-size">$50K to $5M</span><div style="font-size:10px;color:var(--ink-faint);">70 to 90% of outstanding invoices</div></td>
+          <td><span class="qm-yes">YES:</span> Licensed producers with OCS purchase orders, any cannabis business with outstanding invoices from creditworthy buyers, minimum $100K in monthly invoices</td>
+          <td><span class="qm-no">NO:</span> Retailers with no outstanding receivables (their customers pay at point of sale), businesses with no formal invoicing structure</td>
+          <td>5 to 10 business days</td>
+          <td>1.5 to 4 percent per 30 days on the invoice value. For $500K in invoices at 2 percent per 30 days, monthly cost is $10K. Effective annual rate roughly 24 to 48 percent.</td>
+        </tr>
+        <tr>
+          <td><div class="qm-product">Equipment Loan</div><div style="font-size:10px;color:var(--ink-faint);">Asset-Backed</div></td>
+          <td>You borrow money specifically to buy equipment. The equipment itself serves as collateral. If you default, the lender takes the equipment. You own the equipment at the end of the term. Fixed monthly payments, predictable cost, no daily holdback on sales.</td>
+          <td><span class="qm-size">$5K to $3M</span><div style="font-size:10px;color:var(--ink-faint);">Up to 100% of equipment cost</div></td>
+          <td><span class="qm-yes">YES:</span> Any cannabis operator buying qualifying equipment. Even early stage operators can qualify because the equipment is the collateral. Personal guarantee usually required. 6+ months preferred but not always required.</td>
+          <td><span class="qm-no">NO:</span> Operators trying to finance soft costs (legal, licensing, labour). Equipment must be identifiable, lendable, and have resale value.</td>
+          <td>5 to 15 business days</td>
+          <td>8 to 25 percent annual interest over 24 to 84 month term. Fixed monthly payments. Total cost is predictable and lower than MCA for equipment-specific needs. Source: AmeriCU, FundCanna, GrowerIQ 2023.</td>
+        </tr>
+        <tr>
+          <td><div class="qm-product">Bridge Loan</div><div style="font-size:10px;color:var(--ink-faint);">Private Lending</div></td>
+          <td>Short-term debt secured by real assets (real estate, licenses, equipment) to bridge the gap between where you are and where you need to be. Used for acquisitions, expansions, or holding while longer-term financing is arranged. Interest-only payments are common.</td>
+          <td><span class="qm-size">$500K to $25M+</span><div style="font-size:10px;color:var(--ink-faint);">SET Ventures specialty product</div></td>
+          <td><span class="qm-yes">YES:</span> Established operators with 2+ years, verifiable assets as collateral, positive EBITDA or clear path to profitability, multi-location groups, operators acquiring new licenses or locations</td>
+          <td><span class="qm-no">NO:</span> Startups with no assets, operators without clear exit or repayment strategy, businesses with unresolved legal or compliance issues</td>
+          <td>2 to 8 weeks</td>
+          <td>10 to 18 percent annual on private bridge. Interest-only monthly payments. SET Ventures connects to direct private lenders. Above $500K corporate loans are exempt from Canada s.347 criminal rate cap. Source: HEF Finance, SET Ventures, McMillan LLP.</td>
+        </tr>
+        <tr>
+          <td><div class="qm-product">Commercial RE</div><div style="font-size:10px;color:var(--ink-faint);">Real Estate Financing</div></td>
+          <td>Financing to purchase or refinance the physical property where you operate. Traditional banks will not provide this for cannabis properties. Private lenders, family offices, and US cannabis REITs (Innovative Industrial Properties, Power REIT) fill this gap. Sale-leaseback lets you sell your property and lease it back, converting real estate equity to working capital.</td>
+          <td><span class="qm-size">$500K to $50M+</span><div style="font-size:10px;color:var(--ink-faint);">55 to 75% LTV</div></td>
+          <td><span class="qm-yes">YES:</span> Operators who own their property or are purchasing, operators with strong cash flow to service debt, vertically integrated LPs with cultivation facilities, cannabis hotel and cafe developers</td>
+          <td><span class="qm-no">NO:</span> Operators who lease and have no property to collateralize, businesses with poor revenue or irregular cash flow, markets where cannabis RE lending is not yet active</td>
+          <td>4 to 12 weeks</td>
+          <td>12 to 18 percent private (Canada). IIPR sale-leaseback terms vary but typically favorable for operators who need immediate liquidity from owned property. Source: IIPR public filings, AmeriCU, Alta Fund 2026.</td>
+        </tr>
+        <tr>
+          <td><div class="qm-product">Line of Credit</div><div style="font-size:10px;color:var(--ink-faint);">Revolving</div></td>
+          <td>Revolving credit facility up to a set limit. Draw what you need, pay it back, draw again. You pay interest only on what you use. Lower cost than MCA for recurring operational needs. Some cannabis-specific lenders offer this. BDC (Canada) and specialized credit unions (AmeriCU in New York) offer this product.</td>
+          <td><span class="qm-size">$25K to $500K</span><div style="font-size:10px;color:var(--ink-faint);">Cannabis-specific lenders only</div></td>
+          <td><span class="qm-yes">YES:</span> Established operators with 12+ months history, strong credit (650+), consistent revenue, operators who want flexibility for ongoing operational needs rather than a one-time advance</td>
+          <td><span class="qm-no">NO:</span> New operators, poor credit history, operators who need a large one-time capital injection rather than a revolving facility</td>
+          <td>1 to 4 weeks</td>
+          <td>Lower than MCA. Interest charged only on drawn amount. Rates vary but typically 18 to 35 percent APR for cannabis borrowers. Source: AmeriCU, Clear Skies Capital, Merchant Growth Canada.</td>
+        </tr>
+        <tr>
+          <td><div class="qm-product">280E Bridge</div><div style="font-size:10px;color:var(--ink-faint);">US Only</div></td>
+          <td>US cannabis operators cannot deduct most business expenses due to IRS Section 280E, which applies because cannabis is still federally illegal. This creates massive quarterly and annual tax bills that operators must pay in cash. A 280E bridge is a short-term advance (90 to 180 days) timed to cover this tax obligation, repaid after the tax payment deadline when cash flow stabilizes.</td>
+          <td><span class="qm-size">$50K to $2M</span><div style="font-size:10px;color:var(--ink-faint);">US operators only</div></td>
+          <td><span class="qm-yes">YES:</span> Any US state-legal cannabis operator facing quarterly or annual 280E federal tax obligations. FundCanna, United Capital Source, and Clarify Capital specialize in this.</td>
+          <td><span class="qm-no">NO:</span> Canadian operators (not applicable). US operators who are not current on their 280E filings or have other IRS issues are higher risk.</td>
+          <td>2 to 5 business days</td>
+          <td>MCA-equivalent pricing. Factor rates 1.15 to 1.40x depending on revenue and credit profile. Potentially eliminated if cannabis is rescheduled to Schedule III (Trump December 2025 executive order to expedite still pending April 2026).</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 3: APRIL 20 TARGET LIST -->
+  <div class="target-section">
+    <div class="deadline-box">
+      <div class="deadline-label">April 20, 2026 Deadline, 15 Days from Now</div>
+      <div class="deadline-h2">The $1M MCA Close Target List</div>
+      <div class="deadline-sub">These are the Ontario cannabis operators who publicly appear to meet the profile for a $1M MCA structure based on store count, market presence, and estimated revenue from public data. All are privately held independent groups, meaning they can move fast without public company approvals. None of these are confirmed clients, they are research targets derived entirely from public record including AGCO data, StratCann, Headset, and company websites. The play: identify the decision maker, get the meeting, run the LP Qualifier calculator live in the room.</div>
+      <div class="deadline-grid">
+        <div class="dg-item">
+          <div class="dg-label">Target Profile Required</div>
+          <div class="dg-val">$700K+ Monthly</div>
+          <div class="dg-note">Combined revenue across all locations to comfortably support a $700K to $1M MCA advance</div>
+        </div>
+        <div class="dg-item">
+          <div class="dg-label">Ideal Location Count</div>
+          <div class="dg-val">5 to 15 Stores</div>
+          <div class="dg-note">Multi-location private operators. More locations means more daily deposits and stronger lender confidence</div>
+        </div>
+        <div class="dg-item">
+          <div class="dg-label">Must Be</div>
+          <div class="dg-val">Privately Held</div>
+          <div class="dg-note">Publicly listed companies have capital market access. Private independent groups can close in 15 days</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="target-hdr">
+      <div class="target-hdr-title">Top 15 Ontario Targets for the $1M MCA Play, April 20th</div>
+      <span class="target-count" style="background:#ff4400;color:white;">April 20 Priority</span>
+    </div>
+    <div style="background:var(--orange-lt);border-left:3px solid var(--orange);border-radius:0 6px 6px 0;padding:12px 16px;margin-bottom:16px;font-size:11px;color:#555;line-height:1.6;">
+      <strong style="color:#7a2a00;">Important note for the team.</strong> Revenue figures below are estimates derived from store count multiplied by average Ontario monthly revenue per store ($97K to $200K depending on location and market density). These are not confirmed financials. They are directional estimates to help prioritize outreach. The LP Qualifier calculator gives you the real numbers once you confirm their actual monthly deposits. Source basis: OCS 2024 data, Headset Dec 2025, StratCann June 2025, AGCO Feb 2026.
+    </div>
+
+    <div class="target-cards">
+
+      <div class="target-card hot">
+        <div>
+          <div class="tc-name">True North Cannabis Co.</div>
+          <div class="tc-sub">49 Ontario Locations, Privately Held, Belleville HQ</div>
+        </div>
+        <div class="tc-body">Ontario's second largest cannabis chain after Canna Cabana, with 49 locations across Southern and Central Ontario including Toronto, Ottawa, Hamilton, Cambridge, and Mississauga. Privately owned and operated, which means they can make capital decisions fast without public company approvals. <strong>Estimated combined monthly revenue: $4M to $8M+ across 49 stores.</strong> At 100% of monthly, this group could theoretically access $4M to $8M in MCA capacity. For our play, a $1M advance against their combined deposits is a very small fraction of their total capacity. The ask is easy to justify. Rollagram equity positions them as the founding multi-location partner in Ontario. Contact point: founders and owners listed on LinkedIn under True North Cannabis Co. HQ in Belleville, Ontario.</div>
+        <div class="tc-action">
+          <div class="tc-score" style="color:#ff4400;">9.5/10</div>
+          <div class="tc-score-label">Priority Score</div>
+          <div class="tc-play hot">April 20 Target</div>
+        </div>
+      </div>
+
+      <div class="target-card hot">
+        <div>
+          <div class="tc-name">Crown Leaf Cannabis</div>
+          <div class="tc-sub">8 GTA Locations, Privately Held, Brampton, Mississauga, North York</div>
+        </div>
+        <div class="tc-body">Independently owned chain with 8 locations across the GTA including 4 in Brampton, 2 in Mississauga, and 2 in North York. Operating since July 2021 with a Royal Club loyalty program and established delivery. <strong>Estimated combined monthly revenue: $600K to $1.2M across 8 stores.</strong> 8 high-traffic GTA locations in Brampton and Mississauga (two of Ontario's highest-density cannabis markets) means above-average per-store revenue is likely. Could support a $600K to $1M advance. Crown Leaf is exactly the profile we target: multi-location, independent, privately held, GTA footprint. Website: thecrownleaf.ca. Source: thecrownleaf.ca, AGCO data.</div>
+        <div class="tc-action">
+          <div class="tc-score" style="color:#ff4400;">9/10</div>
+          <div class="tc-score-label">Priority Score</div>
+          <div class="tc-play hot">April 20 Target</div>
+        </div>
+      </div>
+
+      <div class="target-card hot">
+        <div>
+          <div class="tc-name">Kindling Cannabis</div>
+          <div class="tc-sub">7 GTA Locations, Hamilton, Mississauga, Milton, Oshawa, Burlington, Brampton, Toronto</div>
+        </div>
+        <div class="tc-body">Multi-location privately owned Ontario chain with locations across Hamilton, Mississauga (Port Credit), Milton, Oshawa, Burlington, Brampton, and multiple Toronto locations. Founded and independently operated with a delivery network across the GTA. <strong>Estimated combined monthly revenue: $500K to $1M across 7 locations.</strong> Port Credit Mississauga and Hamilton locations are in high-density, established cannabis markets. Free 1-hour delivery program signals strong operational capacity. Website: shopkindling.ca. This operator type is ideal for the Rollagram founding partner conversation, they are established, multi-city, and clearly invested in brand and customer experience. Source: shopkindling.ca, AGCO data.</div>
+        <div class="tc-action">
+          <div class="tc-score" style="color:#ff4400;">8.5/10</div>
+          <div class="tc-score-label">Priority Score</div>
+          <div class="tc-play hot">April 20 Target</div>
+        </div>
+      </div>
+
+      <div class="target-card">
+        <div>
+          <div class="tc-name">The Hunny Pot Cannabis Co.</div>
+          <div class="tc-sub">Multiple Toronto Locations, Privately Held, Toronto's First Legal Dispensary</div>
+        </div>
+        <div class="tc-body">One of the most recognizable independent cannabis retail brands in Toronto. Toronto's first legal cannabis store (2103 Yonge St) and has expanded to multiple Toronto locations. Strong brand recognition and loyal customer base. <strong>Estimated combined monthly revenue: $800K to $1.5M+ across multiple Toronto locations.</strong> Toronto Yonge Street corridor is one of the highest-revenue cannabis retail corridors in Canada. The Hunny Pot is a premium brand with experienced ownership who would understand and appreciate the Rollagram value proposition. Founders are well-connected in the industry. Source: dispensarygta.com, Yelp Canada, AGCO data.</div>
+        <div class="tc-action">
+          <div class="tc-score" style="color:var(--green);">8/10</div>
+          <div class="tc-score-label">Priority Score</div>
+          <div class="tc-play green">Strong Target</div>
+        </div>
+      </div>
+
+      <div class="target-card">
+        <div>
+          <div class="tc-name">Superette</div>
+          <div class="tc-sub">Multiple Ontario Locations, Ottawa and Toronto, Privately Held</div>
+        </div>
+        <div class="tc-body">Design-forward independent cannabis retail brand with locations in Toronto (Yonge St) and Ottawa (Wellington St W), known for premium aesthetic and brand-conscious operations. Strong cultural fit with the Rollagram and WAVMVMT mission around creative, design-forward cannabis retail. <strong>Estimated combined monthly revenue: $400K to $800K across locations.</strong> Superette has been cited in every major Canadian cannabis retail roundup as a brand-defining independent. Their ownership team would likely be receptive to a Rollagram founding partner conversation because they already invest heavily in brand and community. Source: dispensarygta.com, Leafly Canada, AGCO data.</div>
+        <div class="tc-action">
+          <div class="tc-score" style="color:var(--green);">7.5/10</div>
+          <div class="tc-score-label">Priority Score</div>
+          <div class="tc-play green">Strong Target</div>
+        </div>
+      </div>
+
+      <div class="target-card">
+        <div>
+          <div class="tc-name">Dutch Love Cannabis</div>
+          <div class="tc-sub">Multi-Location Ontario, Privately Held, Wellness and Community Focus</div>
+        </div>
+        <div class="tc-body">Independent cannabis retailer with a wellness and community focus operating multiple Ontario locations. Known for compassionate service and community engagement. Multiple GTA area locations. <strong>Estimated combined monthly revenue: $300K to $600K.</strong> The wellness and community positioning makes Dutch Love an ideal Rollagram cultural fit. Operators who brand around community and wellness are the most aligned with what Rollagram stands for in the long term. Source: DispensaryGTA, AGCO data.</div>
+        <div class="tc-action">
+          <div class="tc-score" style="color:var(--green);">7/10</div>
+          <div class="tc-score-label">Priority Score</div>
+          <div class="tc-play green">Strong Target</div>
+        </div>
+      </div>
+
+      <div class="target-card">
+        <div>
+          <div class="tc-name">Large Multi-Location Independents Via AGCO List</div>
+          <div class="tc-sub">Targets 7 through 15, Pull Directly from AGCO Public Database</div>
+        </div>
+        <div class="tc-body">The AGCO publishes a complete list of all 1,829 Ontario Authorized Cannabis Store holders. Any entity appearing on the list with 4 or more store authorizations under the same legal name or affiliate group is a potential $1M MCA target. The action step is to pull this list this week, filter for multi-location entities, cross-reference the store cities against high-revenue markets (Toronto 166 stores, Mississauga 66, Ottawa 61, London 60, Hamilton 59, Brampton 46), and build a ranked outreach list. <strong>There are an estimated 20 to 40 private operators in Ontario with 5 or more locations</strong> based on the data from StratCann (Canna Cabana 83, True North 49, Value Buds 45, Tokyo Smoke 39 account for only 216 of 1,799 stores, leaving 1,583 stores operated by smaller independent groups). Source: AGCO.ca, StratCann June 2025.</div>
+        <div class="tc-action">
+          <div class="tc-score" style="color:var(--blue);">Pull List</div>
+          <div class="tc-score-label">Priority Action</div>
+          <div class="tc-play blue">This Week</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SECTION 4: TARGETS BY LOAN TYPE -->
+  <div class="target-section">
+    <div class="target-hdr">
+      <div class="target-hdr-title">Target Companies by Loan Type, 3 to 5 Per Category</div>
+      <span class="target-count" style="background:var(--purple-lt);color:var(--purple);">Beyond the MCA</span>
+    </div>
+
+    <div style="margin-bottom:24px;">
+      <div style="font-family:var(--serif);font-size:16px;font-weight:700;color:var(--blue);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border);">AR Financing Targets, Licensed Producers with OCS Volume</div>
+      <div class="target-cards">
+        <div class="target-card blue">
+          <div><div class="tc-name">Mera Cannabis Corp</div><div class="tc-sub">Ontario LP, Concentrates Specialist, Public Record</div></div>
+          <div class="tc-body">Abi Roach (Rollagram advisor, HOTBOX founder) has connections to Mera Cannabis Corp as their marketing and merchandising director per public information. Mera is a licensed producer known for concentrate products. LPs with active OCS purchase orders are ideal AR financing candidates. OCS pays in 30 to 45 days, creating a cash flow gap that AR financing fills immediately. <strong>Play:</strong> Introduce SET Ventures AR financing product against their OCS receivables. Rollagram brand profile to connect Mera directly to budtenders at all 1,829 Ontario retailers.</div>
+          <div class="tc-action"><div class="tc-score" style="color:var(--blue);">9/10</div><div class="tc-score-label">LP Target</div><div class="tc-play blue">Warm Intro via Abi</div></div>
+        </div>
+        <div class="target-card blue">
+          <div><div class="tc-name">Ontario Craft LP Network</div><div class="tc-sub">Micro-Cultivators, 224 Ontario Supplier LPs in OCS Database</div></div>
+          <div class="tc-body">OCS lists 224 Ontario supplier and LP entities. Micro-cultivators with active OCS purchase orders and consistent quarterly production cycles are ideal AR financing clients because their cash flow gap is structural and predictable. The OCS Doing Business portal lists all active Ontario suppliers publicly. <strong>Play:</strong> Approach 5 to 10 Ontario craft LPs doing $500K to $2M per year in OCS sales. Offer AR financing against their OCS receivables through SET Ventures lender network. Rollagram brand subscription at $500/month to get product education in front of 527K budtenders.</div>
+          <div class="tc-action"><div class="tc-score" style="color:var(--blue);">8/10</div><div class="tc-score-label">LP Batch Target</div><div class="tc-play blue">OCS List Pull</div></div>
+        </div>
+        <div class="target-card blue">
+          <div><div class="tc-name">Ontario Micro-Growers Association Members</div><div class="tc-sub">Ontario Grown Program Participants, Public OCS Data</div></div>
+          <div class="tc-body">OCS runs an Ontario Grown program that connects Ontario-based micro-growers to the retail market. These operators have verified OCS relationships and predictable purchase order cycles. They are often undercapitalized relative to their production opportunity. <strong>Play:</strong> AR financing to unlock cash tied up in OCS receivables. Rollagram as their budtender education and brand discovery platform. Mairy Jane to connect them with artists for brand partnership campaigns.</div>
+          <div class="tc-action"><div class="tc-score" style="color:var(--blue);">7.5/10</div><div class="tc-score-label">Batch Target</div><div class="tc-play blue">OCS Grower List</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-bottom:24px;">
+      <div style="font-family:var(--serif);font-size:16px;font-weight:700;color:var(--gold);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border);">Equipment Financing Targets, Single-Location Operators Opening New Stores</div>
+      <div class="target-cards">
+        <div class="target-card gold">
+          <div><div class="tc-name">New AGCO Authorization Holders</div><div class="tc-sub">Recently Approved, Not Yet Open, Equipment Needed</div></div>
+          <div class="tc-body">AGCO issues retail store authorizations before stores open. Any operator with a recently issued authorization who has not yet opened their store needs equipment: POS, security, display cases, HVAC. <strong>Average equipment spend to open a new Ontario cannabis store: $80K to $200K.</strong> Equipment financing covers this with fixed monthly payments against future store revenue. <strong>Play:</strong> Partner with a compliance consultant or AGCO application service to identify newly authorized operators before they source equipment independently. Offer SET Ventures equipment financing as part of the opening package. Pre-enroll them on Rollagram before the store opens.</div>
+          <div class="tc-action"><div class="tc-score" style="color:var(--gold);">8/10</div><div class="tc-score-label">Equipment Target</div><div class="tc-play" style="background:var(--gold-lt);color:var(--gold);">AGCO New Auths</div></div>
+        </div>
+        <div class="target-card gold">
+          <div><div class="tc-name">3rd and 4th Location Openers</div><div class="tc-sub">Operators with 2 Profitable Stores Ready to Scale</div></div>
+          <div class="tc-body">An operator with 2 profitable locations who has secured a 3rd authorization has proven the model and needs $80K to $200K in equipment to outfit the new store. They have the track record to qualify for equipment financing but may not have the cash on hand without disrupting working capital. This is the perfect equipment loan conversation. <strong>Play:</strong> Identify 2-location operators from the AGCO list who have recently added a 3rd authorization. Approach with SET Ventures equipment financing for the new location. Rollagram enrollment included. MCA conversation follows in 6 months when the 3rd location is fully ramped.</div>
+          <div class="tc-action"><div class="tc-score" style="color:var(--gold);">8.5/10</div><div class="tc-score-label">Equipment Target</div><div class="tc-play" style="background:var(--gold-lt);color:var(--gold);">AGCO List Filter</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-bottom:24px;">
+      <div style="font-family:var(--serif);font-size:16px;font-weight:700;color:var(--purple);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border);">Bridge Loan Targets, Established Operators Ready for Major Moves</div>
+      <div class="target-cards">
+        <div class="target-card purple">
+          <div><div class="tc-name">Value Buds Ontario Group</div><div class="tc-sub">45 Ontario Locations, Owned by SNDL, Expansion-Focused</div></div>
+          <div class="tc-body">Value Buds has 45 Ontario locations and is owned by SNDL (public company). While publicly listed companies do not need MCAs, they may need bridge financing for specific expansion projects or location acquisitions that their public balance sheet cannot fund quickly. <strong>Note:</strong> SNDL is publicly traded, so this is a different conversation, this is about corporate bridge lending through SET Ventures relationships for a specific project rather than a general capital raise. This type of deal requires SET Ventures to present a specific project bridge proposal rather than a general capital conversation.</div>
+          <div class="tc-action"><div class="tc-score" style="color:var(--purple);">6/10</div><div class="tc-score-label">Bridge Target</div><div class="tc-play" style="background:var(--purple-lt);color:var(--purple);">Project-Specific</div></div>
+        </div>
+        <div class="target-card purple">
+          <div><div class="tc-name">True North Cannabis (Bridge Conversation)</div><div class="tc-sub">49 Locations, After the MCA Relationship Is Established</div></div>
+          <div class="tc-body">Once True North Cannabis is in the Rollagram ecosystem and the first MCA deal is done, the natural next conversation in 6 to 12 months is a bridge loan for major expansion. A group doing $4M to $8M per month combined and operating 49 locations likely has real estate assets and license portfolios that can support a $5M to $15M bridge loan for acquiring locations in new Ontario municipalities or bridging a large inventory purchase. <strong>Play:</strong> MCA relationship first, bridge conversation second. Set Ventures positions as the long-term capital advisor from the first meeting.</div>
+          <div class="tc-action"><div class="tc-score" style="color:var(--purple);">9/10</div><div class="tc-score-label">Bridge Target</div><div class="tc-play" style="background:var(--purple-lt);color:var(--purple);">Month 6 to 12</div></div>
+        </div>
+        <div class="target-card purple">
+          <div><div class="tc-name">Cannabis Real Estate Developers, GTA</div><div class="tc-sub">Cannabis Cafe, Hotel, and Experiential Venue Projects</div></div>
+          <div class="tc-body">As Rollagram moves into Phase 3 (cannabis cafes, hotels, experiential venues), developers pursuing these projects will need bridge financing against the real estate. No traditional bank will mortgage a cannabis hospitality property in Canada today. SET Ventures and WAVMVMT private lender network is the solution. <strong>Play:</strong> Position SET Ventures as the go-to bridge lender for cannabis hospitality real estate in Canada ahead of Phase 3 activation (2028 target). Start building those relationships now by attending Lift and Co and other industry events as capital advisors.</div>
+          <div class="tc-action"><div class="tc-score" style="color:var(--purple);">7/10</div><div class="tc-score-label">Bridge Target</div><div class="tc-play" style="background:var(--purple-lt);color:var(--purple);">2027 to 2028</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-bottom:24px;">
+      <div style="font-family:var(--serif);font-size:16px;font-weight:700;color:var(--orange);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border);">US Targets, Michigan, Illinois, and New York Focus</div>
+      <div class="target-cards">
+        <div class="target-card orange">
+          <div><div class="tc-name">Michigan Multi-Location Private Operators</div><div class="tc-sub">Michigan CRA License Database, Public Record</div></div>
+          <div class="tc-body">Michigan Cannabis Regulatory Agency publishes all active licenses publicly at michigan.gov/cra. Operators with 3 or more retail licenses are the US equivalent of our Canadian multi-location target. Michigan is a national leader in monthly cannabis sales and has relatively lower taxes than California, meaning operators are more profitable. <strong>Play:</strong> Pull Michigan CRA data, filter for 3 or more retail locations under one entity, identify private operators (not MSOs or publicly listed), approach for the $750K US MCA play and Rollagram Phase 2 US founding partner conversation. Source: covasoftware.com North America 2026.</div>
+          <div class="tc-action"><div class="tc-score" style="color:var(--orange);">8.5/10</div><div class="tc-score-label">US Target</div><div class="tc-play orange">CRA List Pull</div></div>
+        </div>
+        <div class="target-card orange">
+          <div><div class="tc-name">Missouri Independent Operators</div><div class="tc-sub">Breakout Market, High Per-License Revenue, Private Operators</div></div>
+          <div class="tc-body">Missouri was described by Cova Software (April 2026) as a breakout success story with rapid growth and manageable startup requirements. Limited license counts mean high per-license revenue, making Missouri operators strong MCA candidates. The Missouri Department of Health and Senior Services publishes active cannabis license holders. <strong>Play:</strong> Missouri private operators with 2 to 5 locations doing 280E bridge financing through SET Ventures and WAVMVMT US lender connections. Rollagram Phase 2 US founding partner conversation. Source: covasoftware.com North America 2026.</div>
+          <div class="tc-action"><div class="tc-score" style="color:var(--orange);">7.5/10</div><div class="tc-score-label">US Target</div><div class="tc-play orange">DHSS List Pull</div></div>
+        </div>
+        <div class="target-card orange">
+          <div><div class="tc-name">New York Independent Dispensaries</div><div class="tc-sub">~600 Open Dispensaries, AmeriCU Credit Union Relationship</div></div>
+          <div class="tc-body">New York is approaching 600 open dispensaries as of early 2026. AmeriCU Credit Union (state-chartered, cannabis-friendly) is one of the few credit unions offering cannabis-specific equipment loans ($5K to $250K) and commercial real estate financing. New York operators who need equipment financing for a new location can be served through the AmeriCU relationship. <strong>Play:</strong> Identify New York independent operators with 2 to 4 locations who are opening new locations. Offer equipment financing facilitated through SET Ventures and WAVMVMT US lender network. Rollagram New York founding partner for Phase 2 US launch. Source: AmeriCU.org, covasoftware.com April 2026.</div>
+          <div class="tc-action"><div class="tc-score" style="color:var(--orange);">7/10</div><div class="tc-score-label">US Target</div><div class="tc-play orange">NY OCM License Data</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 5: ACTION CHECKLIST -->
+  <div class="target-section">
+    <div class="target-hdr">
+      <div class="target-hdr-title">The Team Action List, Do These Things This Week</div>
+      <span class="target-count" style="background:#0F0F0F;color:white;">Immediate</span>
+    </div>
+    <div style="background:#0F0F0F;border-radius:12px;padding:28px;color:white;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div>
+          <div style="font-family:var(--mono);font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:#4ade80;margin-bottom:12px;">Darren and Rollagram Team</div>
+          <div style="display:flex;flex-direction:column;gap:9px;">
+            <div style="font-size:12px;font-weight:300;opacity:0.85;padding:10px 12px;background:rgba(255,255,255,0.06);border-radius:6px;border-left:3px solid #4ade80;line-height:1.5;"><strong style="color:#4ade80;display:block;font-size:10px;margin-bottom:3px;font-family:var(--mono);letter-spacing:1px;">TODAY</strong>Reach out to Abi Roach (HOTBOX, Mera Cannabis). She is already on the Rollagram team. Ask her for 3 warm intros to Ontario multi-location operators she knows personally. That is the fastest path to a conversation before April 20.</div>
+            <div style="font-size:12px;font-weight:300;opacity:0.85;padding:10px 12px;background:rgba(255,255,255,0.06);border-radius:6px;border-left:3px solid #4ade80;line-height:1.5;"><strong style="color:#4ade80;display:block;font-size:10px;margin-bottom:3px;font-family:var(--mono);letter-spacing:1px;">THIS WEEK</strong>Contact True North Cannabis Co. directly. They have 49 Ontario locations and are privately held. Find the founder or COO on LinkedIn (search True North Cannabis Co, Belleville Ontario). Send the LP Qualifier tab link as a teaser. A combined monthly revenue of $4M to $8M makes them our highest-priority qualifying target.</div>
+            <div style="font-size:12px;font-weight:300;opacity:0.85;padding:10px 12px;background:rgba(255,255,255,0.06);border-radius:6px;border-left:3px solid #4ade80;line-height:1.5;"><strong style="color:#4ade80;display:block;font-size:10px;margin-bottom:3px;font-family:var(--mono);letter-spacing:1px;">THIS WEEK</strong>Contact Crown Leaf Cannabis (thecrownleaf.ca). 8 GTA locations, privately held, Brampton, Mississauga, North York. Decision maker is accessible through the website and LinkedIn. This is a warm conversation: they are exactly the operator Rollagram was built for.</div>
+            <div style="font-size:12px;font-weight:300;opacity:0.85;padding:10px 12px;background:rgba(255,255,255,0.06);border-radius:6px;border-left:3px solid #4ade80;line-height:1.5;"><strong style="color:#4ade80;display:block;font-size:10px;margin-bottom:3px;font-family:var(--mono);letter-spacing:1px;">THIS WEEK</strong>Contact Kindling Cannabis (shopkindling.ca). 7 GTA locations across Hamilton, Mississauga, Milton, Oshawa, Burlington, Brampton, and Toronto. Delivery-enabled, community-focused operator with strong brand. High cultural fit for Rollagram founding partner positioning.</div>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:var(--mono);font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:#93c5fd;margin-bottom:12px;">Shim, SET Ventures, and WAVMVMT</div>
+          <div style="display:flex;flex-direction:column;gap:9px;">
+            <div style="font-size:12px;font-weight:300;opacity:0.85;padding:10px 12px;background:rgba(255,255,255,0.06);border-radius:6px;border-left:3px solid #93c5fd;line-height:1.5;"><strong style="color:#93c5fd;display:block;font-size:10px;margin-bottom:3px;font-family:var(--mono);letter-spacing:1px;">TODAY</strong>Download the AGCO authorized store list from agco.ca. Filter for any entity name appearing more than 4 times (multiple stores under one company). That gives you a raw list of every multi-location private operator in Ontario. Cross-reference against Toronto, Mississauga, Hamilton, Ottawa, and Brampton store counts for highest-revenue markets.</div>
+            <div style="font-size:12px;font-weight:300;opacity:0.85;padding:10px 12px;background:rgba(255,255,255,0.06);border-radius:6px;border-left:3px solid #93c5fd;line-height:1.5;"><strong style="color:#93c5fd;display:block;font-size:10px;margin-bottom:3px;font-family:var(--mono);letter-spacing:1px;">THIS WEEK</strong>Chris Marchese and SET Ventures to confirm which MCA lenders in their network are active on Ontario cannabis as of April 2026. Confirm factor rates, minimum monthly revenue requirements, and close time for a $700K to $1M advance. This is the lender-side confirmation needed before approaching operators.</div>
+            <div style="font-size:12px;font-weight:300;opacity:0.85;padding:10px 12px;background:rgba(255,255,255,0.06);border-radius:6px;border-left:3px solid #93c5fd;line-height:1.5;"><strong style="color:#93c5fd;display:block;font-size:10px;margin-bottom:3px;font-family:var(--mono);letter-spacing:1px;">THIS WEEK</strong>Draft the one-page term sheet for the Rollagram founding LP deal. Terms: $X MCA advance, $Y to LP working capital, $Z to Rollagram, equity stake TBD at negotiation. Have SET Ventures legal counsel review. A clean, simple one-page makes the conversation real and shows operators this is a structured offer not a concept.</div>
+            <div style="font-size:12px;font-weight:300;opacity:0.85;padding:10px 12px;background:rgba(255,255,255,0.06);border-radius:6px;border-left:3px solid #93c5fd;line-height:1.5;"><strong style="color:#93c5fd;display:block;font-size:10px;margin-bottom:3px;font-family:var(--mono);letter-spacing:1px;">BY APRIL 15</strong>Have at least 3 qualified conversations in progress. Use this deck (rollagram-deck.vercel.app) in every meeting. The LP Qualifier tab runs the numbers live in the room. The Vision Document shows the full platform. The Playbook shows real dollar examples. The Intel tab shows them they are on the target list. That combination of tools is the full close sequence.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div><!-- end tab-intel -->
+
+
 
 
 

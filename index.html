@@ -651,7 +651,7 @@ body {
 
 /* SCENARIO CARDS */
 .scenario { background: white; border-radius: 14px; border: 1px solid var(--border); margin-bottom: 24px; overflow: hidden; }
-.scenario-header { padding: 20px 28px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.scenario-header { padding: 20px 28px; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 .scenario-header.green  { background: var(--green); color: white; }
 .scenario-header.blue   { background: var(--navy); color: white; }
 .scenario-header.orange { background: var(--orange); color: white; }
@@ -790,7 +790,7 @@ body {
 .dg-note { font-size: 10.5px; font-weight: 300; opacity: 0.7; line-height: 1.4; }
 
 @media print {
-  .top-nav, #tab-qualifier { display: none !important; }
+  .top-nav, #tab-qualifier, #tab-capital, #tab-playbook, #tab-intel { display: none !important; }
   #tab-vision { display: block !important; }
   .doc { padding: 36px 40px 60px; max-width: 100%; }
   body { background: white; }
@@ -803,6 +803,250 @@ body {
   h2, .sec-hdr { page-break-after: avoid; }
 }
 
+
+/* ════════════════════════════════════════════
+   MOBILE OPTIMIZATION — ALL BREAKPOINTS
+════════════════════════════════════════════ */
+
+/* ── Tablets 768px ── */
+@media (max-width: 768px) {
+
+  /* NAV */
+  .top-nav { padding: 0 16px; height: auto; flex-wrap: wrap; gap: 0; }
+  .nav-brand { font-size: 16px; padding: 12px 0; }
+  .nav-tabs { order: 3; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap; padding: 6px 0 8px; gap: 4px; border-top: 1px solid rgba(255,255,255,0.1); scrollbar-width: none; }
+  .nav-tabs::-webkit-scrollbar { display: none; }
+  .nav-tab { font-size: 9px; padding: 6px 12px; white-space: nowrap; flex-shrink: 0; }
+  .nav-right { padding: 10px 0; }
+  .btn-export { padding: 7px 14px; font-size: 9px; }
+
+  /* DOCS */
+  .doc { padding: 32px 20px 60px; }
+  .qualifier { padding: 32px 20px 60px; }
+  .cwave { padding: 32px 20px 60px; }
+  .playbook { padding: 32px 20px 60px; }
+  .intel { padding: 32px 20px 60px; }
+
+  /* HERO SIZES */
+  .hero-h1 { font-size: 28px; }
+  .cwave-h1 { font-size: 26px; }
+  .pb-hero-h1 { font-size: 24px; }
+  .intel-hero-h1 { font-size: 22px; }
+  .hero { padding: 28px 20px; }
+  .pb-hero { padding: 24px 20px; }
+  .intel-hero { padding: 24px 20px; }
+  .cwave-hero { padding: 28px 24px; }
+
+  /* DOC HEADER */
+  .doc-hdr { flex-direction: column; gap: 12px; padding-bottom: 20px; margin-bottom: 32px; }
+  .doc-brand { font-size: 26px; }
+
+  /* STATS */
+  .stats { grid-template-columns: 1fr 1fr; }
+  .stat-grid { grid-template-columns: 1fr 1fr; }
+  .market-grid { grid-template-columns: 1fr 1fr; }
+
+  /* PROBLEMS */
+  .prob-grid { grid-template-columns: 1fr; }
+
+  /* SOLUTION */
+  .sol-cols { grid-template-columns: 1fr; gap: 20px; }
+
+  /* TWO COL */
+  .two-col { grid-template-columns: 1fr; }
+  .boardy-block { grid-template-columns: 1fr; }
+  .entity-grid { grid-template-columns: 1fr; }
+  .edu-grid { grid-template-columns: 1fr; }
+  .opp-grid { grid-template-columns: 1fr; }
+  .profiles { grid-template-columns: 1fr; }
+
+  /* PHASES */
+  .phase { grid-template-columns: 1fr; }
+  .phase-lbl { border-radius: 8px 8px 0 0; padding: 12px 16px; text-align: left; }
+  .phase-body { border-radius: 0 0 8px 8px; border: 1px solid var(--border); border-top: none; }
+
+  /* EXPANSION PHASES */
+  .exp-phase { grid-template-columns: 1fr; }
+  .exp-phase-label { border-radius: 8px 8px 0 0; }
+  .exp-content { border-radius: 0 0 8px 8px; border-left: 1px solid var(--border); border-top: none; }
+
+  /* REVENUE TABLE — horizontal scroll */
+  .rev-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: 11px; }
+  .qual-matrix { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: 10.5px; }
+
+  /* VALUE CARDS */
+  .val-grid { grid-template-columns: 1fr; }
+
+  /* SET GRID */
+  .set-grid { grid-template-columns: 1fr; }
+
+  /* WAVE COLS */
+  .wave-cols { grid-template-columns: 1fr; }
+
+  /* CAP GRID */
+  .cap-grid { grid-template-columns: 1fr; }
+
+  /* SCENARIO */
+  .scenario-header { flex-direction: column; gap: 8px; padding: 18px 20px; }
+  .sc-amount { text-align: left; }
+  .sc-amount { font-size: 26px; }
+  .sc-grid { grid-template-columns: 1fr; }
+  .scenario-body { padding: 20px; }
+
+  /* DEADLINE */
+  .deadline-box { padding: 24px 20px; }
+  .deadline-grid { grid-template-columns: 1fr; }
+
+  /* TARGET CARDS */
+  .target-card { grid-template-columns: 1fr; gap: 10px; }
+  .tc-action { text-align: left; display: flex; align-items: center; gap: 12px; }
+
+  /* PHASE PLAN */
+  .phase-plan .phase-row { grid-template-columns: 1fr; }
+  .phase-time { border-radius: 8px 8px 0 0; padding: 14px 16px; text-align: left; }
+  .phase-content { border-radius: 0 0 8px 8px; border-top: none; }
+  .pc-item { grid-template-columns: 1fr; gap: 4px; }
+  .pc-item-val { text-align: left; }
+
+  /* INTEL TEAM GRID */
+  .intel .deadline-box > div:last-child { grid-template-columns: 1fr; }
+  .intel-team-grid { grid-template-columns: 1fr !important; }
+
+  /* HERO PILLS */
+  .hero-pills { gap: 6px; }
+  .hero-pill { font-size: 8px; padding: 3px 9px; }
+  .cta-pills { gap: 6px; }
+  .cta-pill { font-size: 8px; padding: 4px 10px; }
+
+  /* CAPITAL STACK TABLE */
+  .navy-stack { display: block; overflow-x: auto; }
+  .navy-stack > div { min-width: 600px; }
+
+  /* BS GRID */
+  .bs-grid { grid-template-columns: 1fr 1fr; }
+
+  /* CALC INPUT ROW */
+  .input-row { grid-template-columns: 1fr; }
+
+  /* QUAL HDRN */
+  .qual-h1 { font-size: 26px; }
+
+  /* SEC TITLE */
+  .sec-t { font-size: 18px; }
+
+  /* QREF TABLE */
+  .qref-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+  /* PROFILES */
+  .profile-row { grid-template-columns: 110px 1fr; }
+
+  /* OPP CARDS */
+  .opp-card .opp-size { font-size: 18px; }
+
+  /* SOL DARK */
+  .sol-dark { padding: 24px 20px; }
+
+  /* CTA */
+  .cta { padding: 32px 20px; }
+  .cta-title { font-size: 26px; }
+  .cta-dark { padding: 28px 20px; }
+  .cta-dark .cta-title { font-size: 24px; }
+
+  /* SET DARK */
+  .set-dark { padding: 28px 20px; }
+  .set-title { font-size: 18px; }
+
+  /* WAVE BLOCK */
+  .wave-block { padding: 28px 20px; }
+  .wave-title { font-size: 22px; }
+
+  /* FLYWHEEL SVG */
+  .flywheel-wrap svg { width: 100%; }
+
+  /* DIAGRAM */
+  .diagram svg { width: 100%; }
+  .diagram { padding: 16px; }
+
+}
+
+/* ── Small phones 480px ── */
+@media (max-width: 480px) {
+
+  .hero-h1 { font-size: 24px; }
+  .doc-brand { font-size: 22px; }
+  .cta-title { font-size: 22px; }
+  .pb-hero-h1 { font-size: 20px; }
+  .intel-hero-h1 { font-size: 20px; }
+  .cwave-h1 { font-size: 22px; }
+
+  .stats { grid-template-columns: 1fr; }
+  .stat-grid { grid-template-columns: 1fr; }
+  .market-grid { grid-template-columns: 1fr 1fr; }
+
+  /* NAV tabs smaller */
+  .nav-tab { font-size: 8px; padding: 5px 10px; }
+  .btn-export span { display: none; }
+
+  /* Scenario amounts */
+  .sc-amount { font-size: 22px; }
+
+  /* Qual matrix force scroll */
+  .qual-matrix th, .qual-matrix td { padding: 8px 10px; font-size: 10px; }
+  .qm-product { font-size: 11px; }
+
+  /* Input fields */
+  .input-field { font-size: 16px; } /* prevents iOS zoom */
+
+  /* Section headers */
+  .sec-hdr { flex-wrap: wrap; gap: 8px; }
+  .sec-t { font-size: 16px; }
+
+  /* Value cards */
+  .val-n { font-size: 28px; }
+
+  /* Boardy */
+  .boardy-title { font-size: 20px; }
+  .bs-grid { grid-template-columns: 1fr 1fr; gap: 6px; }
+  .bs-num { font-size: 13px; }
+
+  /* Intel hero */
+  .intel-hero { padding: 20px 16px; }
+
+  /* Target cards full stack */
+  .target-card { padding: 14px 16px; }
+  .tc-name { font-size: 14px; }
+  .tc-action { flex-direction: row; align-items: center; }
+  .tc-score { font-size: 16px; }
+
+  /* Deadline box */
+  .deadline-h2 { font-size: 20px; }
+  .dg-val { font-size: 15px; }
+
+  /* Phase plan */
+  .pc-item { padding: 6px 8px; }
+  .pc-item-label { font-size: 10.5px; }
+
+  /* Action checklist items */
+  .intel div[style*="padding:10px 12px"] { padding: 10px 12px !important; font-size: 11px !important; }
+
+  /* Tables full scroll */
+  .rev-table th, .rev-table td { padding: 8px 10px; }
+
+}
+
+/* ── Ensure 16px input on all iOS to prevent zoom ── */
+@media (max-width: 767px) {
+  input, select, textarea { font-size: 16px !important; }
+  .input-field { font-size: 16px !important; }
+}
+
+
+  .tab-short { display: none; }
+  @media (max-width: 480px) {
+    .tab-full { display: none; }
+    .tab-short { display: inline !important; }
+    .export-label { display: none; }
+  }
 </style>
 </head>
 <body>
@@ -813,10 +1057,10 @@ body {
 <nav class="top-nav">
   <div class="nav-brand">Rollagram</div>
   <div class="nav-tabs">
-    <div class="nav-tab active" onclick="switchTab('vision', this)">Vision Document</div>
-    <div class="nav-tab" onclick="switchTab('qualifier', this)">LP Qualifier</div>
-    <div class="nav-tab" onclick="switchTab('capital', this)">Capital Wave</div>
-    <div class="nav-tab" onclick="switchTab('playbook', this)">Playbook</div>
+    <div class="nav-tab active" onclick="switchTab('vision', this)"><span class='tab-full'>Vision Document</span><span class='tab-short' style='display:none'>Vision</span></div>
+    <div class="nav-tab" onclick="switchTab('qualifier', this)"><span class='tab-full'>LP Qualifier</span><span class='tab-short' style='display:none'>Qualifier</span></div>
+    <div class="nav-tab" onclick="switchTab('capital', this)"><span class='tab-full'>Capital Wave</span><span class='tab-short' style='display:none'>Capital</span></div>
+    <div class="nav-tab" onclick="switchTab('playbook', this)"><span class='tab-full'>Playbook</span><span class='tab-short' style='display:none'>Playbook</span></div>
     <div class="nav-tab" onclick="switchTab('intel', this)" style="background:rgba(255,100,50,0.15);border:1px solid rgba(255,100,50,0.4);color:#ff9977;">Target Intel</div>
   </div>
   <div class="nav-right">
@@ -824,7 +1068,7 @@ body {
       <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8">
         <path d="M8 2v8M5 7l3 3 3-3M2 12v1a1 1 0 001 1h10a1 1 0 001-1v-1"/>
       </svg>
-      Export PDF
+      <span class="export-label">Export PDF</span>
     </button>
   </div>
 </nav>
@@ -1344,7 +1588,7 @@ body {
   <!-- SOURCES -->
   <div style="background:var(--cream-d);border-radius:10px;padding:24px;border:1px solid var(--border);">
     <div style="font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;color:var(--green);margin-bottom:12px;">Sources and References</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+    <div class="intel-team-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
       <div>
         <div style="font-family:var(--mono);font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px;">Canada MCA and Lending</div>
         <div style="font-size:11px;color:var(--ink-lt);line-height:1.8;">
@@ -2196,7 +2440,7 @@ body {
       <div class="sec-t">The Capital Stack We Facilitate, Dollar Examples</div>
       <span class="tag tgold">All Products, All Sizes</span>
     </div>
-    <div style="background:var(--navy);border-radius:14px;padding:36px;color:white;margin-bottom:24px;">
+    <div class="navy-stack" style="background:var(--navy);border-radius:14px;padding:36px;color:white;margin-bottom:24px;">
       <div style="font-family:var(--mono);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#93c5fd;margin-bottom:16px;">Full Capital Stack Summary</div>
       <div style="font-family:var(--serif);font-size:22px;font-weight:700;margin-bottom:20px;">From $10K to $50M+, every product, real dollar amounts.</div>
       <div style="display:flex;flex-direction:column;gap:0;">

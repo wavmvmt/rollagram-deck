@@ -565,6 +565,80 @@ body {
 /* ════════════════════════════════════════════
    PRINT STYLES
 ════════════════════════════════════════════ */
+/* ════════════════════════════════════════════
+   TAB 3 — CAPITAL WAVE
+════════════════════════════════════════════ */
+.cwave { max-width: 900px; margin: 0 auto; padding: 48px 48px 100px; }
+.cwave-hero { background: var(--navy); border-radius: 14px; padding: 52px 48px; text-align: center; margin-bottom: 52px; color: white; position: relative; overflow: hidden; }
+.cwave-eyebrow { font-family: var(--mono); font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: #4ade80; margin-bottom: 16px; }
+.cwave-h1 { font-family: var(--serif); font-size: 40px; font-weight: 700; line-height: 1.1; margin-bottom: 18px; }
+.cwave-h1 em { color: #93c5fd; font-style: normal; }
+.cwave-p { font-size: 14px; font-weight: 300; opacity: 0.82; max-width: 600px; margin: 0 auto 28px; line-height: 1.8; }
+.cwave-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.cpill { padding: 6px 16px; border-radius: 100px; font-family: var(--mono); font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; }
+.cpill-g { background: rgba(61,170,103,0.2); border: 1px solid rgba(61,170,103,0.4); color: #4ade80; }
+.cpill-b { background: rgba(147,197,253,0.15); border: 1px solid rgba(147,197,253,0.35); color: #93c5fd; }
+.cpill-o { background: rgba(249,125,69,0.2); border: 1px solid rgba(249,125,69,0.4); color: #fb923c; }
+.cpill-gold { background: rgba(251,191,36,0.15); border: 1px solid rgba(251,191,36,0.35); color: #fbbf24; }
+.cw-sec { margin-bottom: 52px; }
+.cap-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+.cap-card { background: var(--white); border-radius: 12px; border: 1px solid var(--border); border-top: 4px solid var(--green); padding: 24px; }
+.cap-card.bridge { border-top-color: var(--blue); }
+.cap-card.equip  { border-top-color: var(--gold); }
+.cap-card.commercial { border-top-color: var(--purple); }
+.cap-type { font-family: var(--mono); font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 8px; }
+.cap-name { font-family: var(--serif); font-size: 20px; font-weight: 700; color: var(--green); margin-bottom: 8px; }
+.cap-card.bridge .cap-name { color: var(--blue); }
+.cap-card.equip .cap-name  { color: var(--gold); }
+.cap-card.commercial .cap-name { color: var(--purple); }
+.cap-range { display: inline-block; font-family: var(--serif); font-size: 14px; font-weight: 700; padding: 3px 10px; border-radius: 6px; margin-bottom: 14px; }
+.cap-card:not(.bridge):not(.equip):not(.commercial) .cap-range { background: var(--green-lt); color: var(--green); }
+.cap-card.bridge .cap-range { background: var(--blue-lt); color: var(--blue); }
+.cap-card.equip  .cap-range { background: var(--gold-lt); color: var(--gold); }
+.cap-card.commercial .cap-range { background: var(--purple-lt); color: var(--purple); }
+.cap-desc { font-size: 12px; color: var(--ink-lt); line-height: 1.65; margin-bottom: 16px; }
+.cap-specs { display: flex; flex-direction: column; gap: 6px; }
+.cap-spec { display: grid; grid-template-columns: 110px 1fr; gap: 8px; font-size: 11px; }
+.cap-spec-key { color: var(--ink-faint); }
+.cap-spec-val { font-weight: 600; color: var(--ink); }
+.cap-use-title { font-family: var(--mono); font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink-faint); margin: 14px 0 8px; }
+.cap-uses { display: flex; flex-wrap: wrap; gap: 5px; }
+.cap-use { font-size: 10px; padding: 2px 8px; border-radius: 100px; background: var(--cream-d); color: var(--ink-mid); font-weight: 500; }
+.flywheel-wrap { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 32px; margin-bottom: 14px; text-align: center; }
+.flywheel-label { font-family: var(--mono); font-size: 8.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--green-mid); margin-bottom: 20px; }
+.entity-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+.entity-card { border-radius: 12px; padding: 26px; border: 1px solid var(--border); }
+.entity-card.ent-green  { background: var(--green); color: var(--cream); }
+.entity-card.ent-navy   { background: var(--navy); color: white; }
+.entity-card.ent-orange { background: var(--orange); color: white; }
+.entity-card.ent-dark   { background: #1F1320; color: white; }
+.ent-eyebrow { font-family: var(--mono); font-size: 8px; letter-spacing: 2.5px; text-transform: uppercase; opacity: 0.6; margin-bottom: 10px; }
+.ent-name { font-family: var(--serif); font-size: 22px; font-weight: 700; margin-bottom: 10px; }
+.ent-green .ent-name  { color: #4ade80; }
+.ent-navy  .ent-name  { color: #93c5fd; }
+.ent-orange .ent-name { color: #fde68a; }
+.ent-dark   .ent-name { color: #c4b5fd; }
+.ent-role { font-size: 12px; font-weight: 300; opacity: 0.84; line-height: 1.7; margin-bottom: 16px; }
+.ent-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.ent-tag { font-family: var(--mono); font-size: 8px; letter-spacing: 1px; text-transform: uppercase; padding: 3px 8px; border-radius: 100px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.8); }
+.wave-block { background: linear-gradient(135deg, #1B5E35 0%, #0d3d22 50%, #0F1E3A 100%); border-radius: 14px; padding: 44px 48px; color: white; margin-bottom: 14px; }
+.wave-eyebrow { font-family: var(--mono); font-size: 8.5px; letter-spacing: 3px; text-transform: uppercase; color: #4ade80; margin-bottom: 14px; }
+.wave-title { font-family: var(--serif); font-size: 28px; font-weight: 700; line-height: 1.2; margin-bottom: 18px; }
+.wave-body { font-size: 13px; font-weight: 300; opacity: 0.85; line-height: 1.8; margin-bottom: 28px; }
+.wave-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; }
+.wave-col-title { font-family: var(--mono); font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: #4ade80; margin-bottom: 10px; }
+.wave-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+.wave-list li { font-size: 11.5px; font-weight: 300; opacity: 0.85; padding-left: 14px; position: relative; line-height: 1.5; }
+.wave-list li::before { content: '+'; position: absolute; left: 0; color: #4ade80; font-weight: 700; }
+.market-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-bottom: 24px; }
+.market-card { background: var(--white); border-radius: 10px; border: 1px solid var(--border); padding: 18px 14px; text-align: center; }
+.market-n { font-family: var(--serif); font-size: 26px; font-weight: 700; color: var(--green); margin-bottom: 4px; }
+.market-l { font-size: 10px; color: var(--ink-lt); line-height: 1.4; }
+.cta-dark { background: var(--navy); border-radius: 12px; padding: 44px 48px; text-align: center; color: white; }
+.cta-dark .cta-eyebrow { color: #93c5fd; }
+.cta-dark .cta-title { color: white; }
+.cta-dark .cta-pill { background: rgba(147,197,253,0.12); border-color: rgba(147,197,253,0.3); }
+
 @media print {
   .top-nav, #tab-qualifier { display: none !important; }
   #tab-vision { display: block !important; }
@@ -591,6 +665,7 @@ body {
   <div class="nav-tabs">
     <div class="nav-tab active" onclick="switchTab('vision', this)">Vision Document</div>
     <div class="nav-tab" onclick="switchTab('qualifier', this)">LP Qualifier</div>
+    <div class="nav-tab" onclick="switchTab('capital', this)">Capital Wave</div>
   </div>
   <div class="nav-right">
     <button class="btn-export" onclick="exportPDF()">
@@ -1098,6 +1173,308 @@ body {
 
 </div>
 </div><!-- end tab-qualifier -->
+
+<!-- ═══════════════════════════════════════
+     TAB 3 — CAPITAL WAVE
+═══════════════════════════════════════ -->
+<div id="tab-capital" class="tab-panel">
+<div class="cwave">
+
+  <div class="cwave-hero">
+    <div class="cwave-eyebrow">Capital, Culture, AI, and Infrastructure</div>
+    <div class="cwave-h1">The Wave That Funds<br>an <em>Entire Industry</em></div>
+    <div class="cwave-p">Rollagram, Mairy Jane, SET Ventures, and WAVMVMT are not four separate entities running parallel strategies. They are one integrated wave, combining capital access, AI powered community, cultural infrastructure, and lending relationships to become the financial and creative backbone of the global cannabis industry.</div>
+    <div class="cwave-pills">
+      <span class="cpill cpill-g">Rollagram</span>
+      <span class="cpill cpill-b">SET Ventures</span>
+      <span class="cpill cpill-o">WAVMVMT</span>
+      <span class="cpill cpill-gold">Culture Capital</span>
+      <span class="cpill cpill-g">Mairy Jane AI</span>
+    </div>
+  </div>
+
+  <!-- MARKET SIZE -->
+  <div class="cw-sec">
+    <div class="sec-hdr">
+      <div class="sec-n">01</div>
+      <div class="sec-t">The Market We Are Moving Into</div>
+      <span class="tag tg">Total Addressable</span>
+    </div>
+    <div class="market-grid">
+      <div class="market-card"><div class="market-n">$47B</div><div class="market-l">Canadian and US legal cannabis market combined, 2025 estimate</div></div>
+      <div class="market-card"><div class="market-n">18,800+</div><div class="market-l">Licensed dispensaries across Canada and the US needing capital, education, and connection</div></div>
+      <div class="market-card"><div class="market-n">$0</div><div class="market-l">Traditional bank financing available to most cannabis operators in both countries</div></div>
+      <div class="market-card"><div class="market-n">100%</div><div class="market-l">Of cannabis operators rely on alternative lenders, making SET Ventures and partners the essential capital layer</div></div>
+    </div>
+    <div class="callout"><strong>The banking gap is the opportunity.</strong> Traditional financial institutions will not touch cannabis. Every dispensary, every licensed producer, every cannabis hotel, every grow facility in Canada and the United States must find alternative capital solutions. SET Ventures and WAVMVMT hold direct relationships with the lenders who serve this market, and Rollagram and Mairy Jane are the platform layer that identifies, qualifies, and connects operators to that capital.</div>
+  </div>
+
+  <!-- CAPITAL PRODUCTS -->
+  <div class="cw-sec">
+    <div class="sec-hdr">
+      <div class="sec-n">02</div>
+      <div class="sec-t">The Full Capital Stack We Can Facilitate</div>
+      <span class="tag tb">Every Stage of Growth</span>
+    </div>
+    <div class="cap-grid">
+      <div class="cap-card">
+        <div class="cap-type">Fast Access Capital</div>
+        <div class="cap-name">Merchant Cash Advance</div>
+        <div class="cap-range">$50K to $2M</div>
+        <div class="cap-desc">The fastest capital product available to cannabis operators. Approval is based on revenue history, not credit score, and funds can be in the operator's account within 3 to 7 business days. Cannabis businesses are ideal MCA candidates because they are cash heavy, high volume, and have consistent daily receivables. SET Ventures and WAVMVMT hold direct relationships with MCA providers who are active and comfortable in the cannabis space across both Canada and the United States.</div>
+        <div class="cap-specs">
+          <div class="cap-spec"><div class="cap-spec-key">Close Time</div><div class="cap-spec-val">3 to 7 business days</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Factor Rate</div><div class="cap-spec-val">1.15x to 1.5x depending on revenue profile</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Repayment</div><div class="cap-spec-val">10 to 20 percent of daily receivables, automated</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Qualification</div><div class="cap-spec-val">Minimum 6 months operating, $500K plus annual revenue</div></div>
+        </div>
+        <div class="cap-use-title">Cannabis Industry Use Cases</div>
+        <div class="cap-uses">
+          <span class="cap-use">Inventory Expansion</span>
+          <span class="cap-use">Staff and Payroll</span>
+          <span class="cap-use">Marketing Campaigns</span>
+          <span class="cap-use">Rollagram Onboarding Capital</span>
+          <span class="cap-use">Seasonal Cash Flow</span>
+          <span class="cap-use">New Product Launches</span>
+        </div>
+      </div>
+      <div class="cap-card bridge">
+        <div class="cap-type">Mid Scale Capital</div>
+        <div class="cap-name">Bridge Loans</div>
+        <div class="cap-range">$2M to $25M+</div>
+        <div class="cap-desc">Bridge loans are the capital product that enables serious cannabis operators to make aggressive moves, acquiring new licenses, expanding into new provinces or US states, building out dispensary locations, or bridging the gap while waiting on real estate refinancing. SET Ventures specializes in commercial bridge lending at this scale and connects cannabis operators to institutional lenders through established relationships, dramatically shortening the time from need to funding compared to traditional channels.</div>
+        <div class="cap-specs">
+          <div class="cap-spec"><div class="cap-spec-key">Close Time</div><div class="cap-spec-val">2 to 6 weeks depending on collateral</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Term</div><div class="cap-spec-val">3 to 24 months, interest only structures available</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Collateral</div><div class="cap-spec-val">Real estate, licenses, equipment, receivables</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Qualification</div><div class="cap-spec-val">Established operator, 2 plus years, verifiable assets</div></div>
+        </div>
+        <div class="cap-use-title">Cannabis Industry Use Cases</div>
+        <div class="cap-uses">
+          <span class="cap-use">License Acquisition</span>
+          <span class="cap-use">Multi-Location Expansion</span>
+          <span class="cap-use">Provincial or State Entry</span>
+          <span class="cap-use">Cannabis Cafe Build-Out</span>
+          <span class="cap-use">Real Estate Bridge</span>
+          <span class="cap-use">Dispensary Acquisition</span>
+        </div>
+      </div>
+      <div class="cap-card equip">
+        <div class="cap-type">Asset Based Capital</div>
+        <div class="cap-name">Equipment Financing</div>
+        <div class="cap-range">$25K to $3M</div>
+        <div class="cap-desc">Cannabis operators need specialized equipment at every stage of the supply chain, from cultivation and extraction to retail point of sale systems and delivery vehicles. Equipment financing allows operators to acquire the tools they need without depleting working capital, using the equipment itself as collateral. This product is often available even to operators who cannot access other forms of financing, because the asset secures the loan directly. SET Ventures and partners can facilitate equipment loans across both Canada and the United States for cannabis-adjacent hardware and infrastructure.</div>
+        <div class="cap-specs">
+          <div class="cap-spec"><div class="cap-spec-key">Close Time</div><div class="cap-spec-val">5 to 15 business days</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Term</div><div class="cap-spec-val">24 to 84 months, ownership at end of term</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Coverage</div><div class="cap-spec-val">Up to 100 percent of equipment value</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Qualification</div><div class="cap-spec-val">Equipment as collateral, personal guarantee often sufficient</div></div>
+        </div>
+        <div class="cap-use-title">Cannabis Industry Use Cases</div>
+        <div class="cap-uses">
+          <span class="cap-use">Cultivation Lighting and HVAC</span>
+          <span class="cap-use">Extraction Equipment</span>
+          <span class="cap-use">POS and Compliance Systems</span>
+          <span class="cap-use">Packaging and Processing</span>
+          <span class="cap-use">Delivery Fleet</span>
+          <span class="cap-use">Lab and Testing Equipment</span>
+        </div>
+      </div>
+      <div class="cap-card commercial">
+        <div class="cap-type">Real Estate Capital</div>
+        <div class="cap-name">Commercial Lending</div>
+        <div class="cap-range">$500K to $50M+</div>
+        <div class="cap-desc">As cannabis culture matures into the experiential economy, the physical infrastructure needs to match. Cannabis cafes, cannabis hotels, flagship dispensary locations, grow campuses, and branded cultural centers all require commercial real estate financing. Traditional banks will not provide this for cannabis related properties in most cases. SET Ventures connects operators and developers to specialized commercial lenders, family offices, and private credit facilities that understand the cannabis real estate market and can structure creative financing solutions across Canada and the United States.</div>
+        <div class="cap-specs">
+          <div class="cap-spec"><div class="cap-spec-key">Close Time</div><div class="cap-spec-val">4 to 12 weeks depending on structure</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">LTV</div><div class="cap-spec-val">Up to 75 percent loan to value on qualifying properties</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Structures</div><div class="cap-spec-val">First mortgage, mezzanine, construction, sale-leaseback</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Markets</div><div class="cap-spec-val">Canada nationwide and US recreational states</div></div>
+        </div>
+        <div class="cap-use-title">Cannabis Industry Use Cases</div>
+        <div class="cap-uses">
+          <span class="cap-use">Flagship Dispensary Build-Out</span>
+          <span class="cap-use">Cannabis Cafe Development</span>
+          <span class="cap-use">Cannabis Hotel Projects</span>
+          <span class="cap-use">Grow Facility Construction</span>
+          <span class="cap-use">Cultural Center Development</span>
+          <span class="cap-use">WAVMVMT Centers</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLYWHEEL DIAGRAM -->
+  <div class="cw-sec">
+    <div class="sec-hdr">
+      <div class="sec-n">03</div>
+      <div class="sec-t">The Self Reinforcing Growth Flywheel</div>
+      <span class="tag tg">How It Compounds</span>
+    </div>
+    <div class="flywheel-wrap">
+      <div class="flywheel-label">Capital, Platform, Culture, and Community All Feed Each Other</div>
+      <svg width="100%" viewBox="0 0 700 440" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer ring -->
+        <circle cx="350" cy="220" r="185" fill="none" stroke="#E3F2EB" stroke-width="2"/>
+        <!-- Center -->
+        <circle cx="350" cy="220" r="60" fill="#1B5E35"/>
+        <text x="350" y="213" text-anchor="middle" font-family="Lora, Georgia, serif" font-size="11" font-weight="700" fill="#F5F0E8">The</text>
+        <text x="350" y="228" text-anchor="middle" font-family="Lora, Georgia, serif" font-size="11" font-weight="700" fill="#4ade80">Wave</text>
+        <text x="350" y="243" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="rgba(245,240,232,0.6)">COMPOUND</text>
+
+        <!-- Curved arrows between nodes (arcs) -->
+        <path d="M 420 65 Q 520 80 555 160" stroke="#3DAA67" stroke-width="2" fill="none" stroke-dasharray="0"/>
+        <polygon points="551,170 560,158 565,170" fill="#3DAA67"/>
+
+        <path d="M 570 195 Q 580 270 530 345" stroke="#1A4F99" stroke-width="2" fill="none"/>
+        <polygon points="522,350 535,342 530,354" fill="#1A4F99"/>
+
+        <path d="M 500 380 Q 410 420 310 390" stroke="#C44E18" stroke-width="2" fill="none"/>
+        <polygon points="302,385 312,378 312,392" fill="#C44E18"/>
+
+        <path d="M 165 365 Q 110 280 130 185" stroke="#B8841A" stroke-width="2" fill="none"/>
+        <polygon points="128,175 122,187 136,186" fill="#B8841A"/>
+
+        <path d="M 150 150 Q 200 80 295 60" stroke="#5A2E8A" stroke-width="2" fill="none"/>
+        <polygon points="305,56 294,50 296,63" fill="#5A2E8A"/>
+
+        <!-- Node 1: Operators Access Capital -->
+        <circle cx="350" cy="38" r="50" fill="#E3F2EB" stroke="#1B5E35" stroke-width="1.5"/>
+        <text x="350" y="31" text-anchor="middle" font-family="Lora, Georgia, serif" font-size="10" font-weight="700" fill="#1B5E35">Operators</text>
+        <text x="350" y="44" text-anchor="middle" font-family="Lora, Georgia, serif" font-size="10" font-weight="700" fill="#1B5E35">Access Capital</text>
+        <text x="350" y="57" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#2E7D4F">SET Ventures</text>
+
+        <!-- Node 2: They Grow -->
+        <circle cx="562" cy="178" r="50" fill="#E8F0FB" stroke="#1A4F99" stroke-width="1.5"/>
+        <text x="562" y="171" text-anchor="middle" font-family="Lora, Georgia, serif" font-size="10" font-weight="700" fill="#1A4F99">Operators</text>
+        <text x="562" y="184" text-anchor="middle" font-family="Lora, Georgia, serif" font-size="10" font-weight="700" fill="#1A4F99">Scale and Grow</text>
+        <text x="562" y="197" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#1A4F99">New locations</text>
+
+        <!-- Node 3: Rollagram Activates -->
+        <circle cx="527" cy="360" r="50" fill="#F2ECF9" stroke="#5A2E8A" stroke-width="1.5"/>
+        <text x="527" y="353" text-anchor="middle" font-family="Lora, Georgia, serif" font-size="10" font-weight="700" fill="#5A2E8A">Rollagram</text>
+        <text x="527" y="366" text-anchor="middle" font-family="Lora, Georgia, serif" font-size="10" font-weight="700" fill="#5A2E8A">Activates Them</text>
+        <text x="527" y="379" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#5A2E8A">Brands, budtenders</text>
+
+        <!-- Node 4: MJ Connects -->
+        <circle cx="228" cy="390" r="50" fill="#FEF0E8" stroke="#C44E18" stroke-width="1.5"/>
+        <text x="228" y="383" text-anchor="middle" font-family="Lora, Georgia, serif" font-size="10" font-weight="700" fill="#C44E18">Mairy Jane</text>
+        <text x="228" y="396" text-anchor="middle" font-family="Lora, Georgia, serif" font-size="10" font-weight="700" fill="#C44E18">Connects Partners</text>
+        <text x="228" y="409" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#C44E18">Artists, collabs, deals</text>
+
+        <!-- Node 5: Culture Builds Revenue -->
+        <circle cx="138" cy="168" r="50" fill="#FDF4E0" stroke="#B8841A" stroke-width="1.5"/>
+        <text x="138" y="158" text-anchor="middle" font-family="Lora, Georgia, serif" font-size="10" font-weight="700" fill="#8a6010">WAVMVMT</text>
+        <text x="138" y="171" text-anchor="middle" font-family="Lora, Georgia, serif" font-size="10" font-weight="700" fill="#8a6010">Builds Culture</text>
+        <text x="138" y="184" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#8a6010">Events, media, hubs</text>
+      </svg>
+    </div>
+    <div class="callout"><strong>Every element feeds the next.</strong> Operators access capital through SET Ventures and WAVMVMT lender relationships, they scale their businesses, Rollagram trains their staff and connects them to brands, Mairy Jane surfaces new collaborations and partnerships, WAVMVMT builds the cultural layer that drives consumer demand, and that demand drives revenue which qualifies operators for larger capital facilities. The flywheel accelerates with every rotation.</div>
+  </div>
+
+  <!-- FOUR ENTITIES -->
+  <div class="cw-sec">
+    <div class="sec-hdr">
+      <div class="sec-n">04</div>
+      <div class="sec-t">Four Entities, One Wave</div>
+      <span class="tag tp">The Coalition</span>
+    </div>
+    <div class="entity-grid">
+      <div class="entity-card ent-green">
+        <div class="ent-eyebrow">Platform and Community</div>
+        <div class="ent-name">Rollagram</div>
+        <div class="ent-role">The operating system for the cannabis industry. Rollagram is where budtenders build careers, brands reach the people selling their products, growers find their audience, and artists find their collaborators. As the platform scales, every operator on Rollagram becomes a more legible, more data-rich borrower to capital providers. Rollagram does not just connect people, it makes operators more bankable by creating a verified, trackable record of their professional presence in the industry.</div>
+        <div class="ent-tags"><span class="ent-tag">527K Budtenders</span><span class="ent-tag">4,000+ Brands</span><span class="ent-tag">Voice First</span><span class="ent-tag">Industry Data</span><span class="ent-tag">Certification</span></div>
+      </div>
+      <div class="entity-card ent-navy">
+        <div class="ent-eyebrow">Capital and Lending</div>
+        <div class="ent-name">SET Ventures</div>
+        <div class="ent-role">The capital and lending arm. SET Ventures, led by Chris Marchese, holds direct relationships with MCA providers, bridge lenders, equipment financiers, and commercial real estate capital sources across Canada and the United States. SET Ventures is not a broker searching for lenders on behalf of clients. They are a capital advisory and origination operation with established relationships that allow them to move fast and structure creatively for operators who traditional banks have excluded from the financial system entirely.</div>
+        <div class="ent-tags"><span class="ent-tag">MCA $50K-$2M</span><span class="ent-tag">Bridge $2M-$25M+</span><span class="ent-tag">Equipment Loans</span><span class="ent-tag">Commercial RE</span><span class="ent-tag">Direct Lenders</span></div>
+      </div>
+      <div class="entity-card ent-orange">
+        <div class="ent-eyebrow">Culture and Creative Infrastructure</div>
+        <div class="ent-name">WAVMVMT</div>
+        <div class="ent-role">The cultural engine. WAVMVMT exists at the intersection of music, sound, movement, wellness, and community, making it the natural bridge between cannabis culture and the mainstream. Where Rollagram provides the professional infrastructure and SET Ventures provides the capital, WAVMVMT provides the gravitational pull, the cultural credibility, the creative activations, and the community programming that makes cannabis something people want to be part of rather than something they simply buy. WAVMVMT Centers, globally, will be the physical anchors of this cultural wave.</div>
+        <div class="ent-tags"><span class="ent-tag">Music and Sound</span><span class="ent-tag">Community Hubs</span><span class="ent-tag">Cultural Capital</span><span class="ent-tag">Global Activations</span><span class="ent-tag">Artist Engine</span></div>
+      </div>
+      <div class="entity-card ent-dark">
+        <div class="ent-eyebrow">AI and Connection</div>
+        <div class="ent-name">Mairy Jane</div>
+        <div class="ent-role">The intelligence and connection layer. Mairy Jane is the AI community connector that turns the platform data from Rollagram and the cultural network from WAVMVMT into real business relationships. Double opt-in warm introductions between artists and growers, brands and retailers, operators and capital sources. Mairy Jane does not just suggest connections, it follows through on them, tracking conversations to collaborations and deals to completion. As the network grows, Mairy Jane's introductions become more precise, more valuable, and more trusted by everyone inside the ecosystem.</div>
+        <div class="ent-tags"><span class="ent-tag">AI Connector</span><span class="ent-tag">Double Opt-In</span><span class="ent-tag">WhatsApp Integration</span><span class="ent-tag">Deal Follow-Through</span><span class="ent-tag">Conference Networking</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMBINED WAVE STATEMENT -->
+  <div class="cw-sec">
+    <div class="sec-hdr">
+      <div class="sec-n">05</div>
+      <div class="sec-t">The Combined Wave, What This Actually Is</div>
+      <span class="tag tgold">The Vision</span>
+    </div>
+    <div class="wave-block">
+      <div class="wave-eyebrow">Rollagram, Mairy Jane, SET Ventures, WAVMVMT</div>
+      <div class="wave-title">This is not a startup. This is the infrastructure layer for a $47 billion industry that has never had one.</div>
+      <div class="wave-body">The cannabis industry in Canada and the United States operates today without a unified professional platform, without reliable capital access, without a cultural movement behind it that connects it to the mainstream, and without an AI layer that can intelligently route relationships, capital, and opportunity across the ecosystem. We are building all four simultaneously. Every operator who joins Rollagram becomes a potential capital client for SET Ventures. Every capital client who grows with SET Ventures becomes a deeper node in the Rollagram network. Every cultural activation WAVMVMT runs generates new operators, new artists, and new brand relationships that feed the platform. And Mairy Jane is the intelligence that makes every connection smarter and faster than any human network could on its own.</div>
+      <div class="wave-cols">
+        <div>
+          <div class="wave-col-title">Canada, The Foundation</div>
+          <ul class="wave-list">
+            <li>527K budtenders brought onto Rollagram</li>
+            <li>920 LPs connected to SET Ventures capital</li>
+            <li>3,800 stores trained, certified, and engaged</li>
+            <li>MCA and bridge capital flowing to qualifying operators</li>
+            <li>WAVMVMT cultural programming across major cities</li>
+            <li>Mairy Jane powering every Canadian cannabis event</li>
+          </ul>
+        </div>
+        <div>
+          <div class="wave-col-title">United States, The Scale</div>
+          <ul class="wave-list">
+            <li>15,000 plus dispensaries brought into the network</li>
+            <li>State by state capital advisory through SET US partners</li>
+            <li>Cannabis cafes and hotels financed through commercial lending</li>
+            <li>US music and cannabis cultural crossover activated by WAVMVMT</li>
+            <li>Multi state operators financed and platformed simultaneously</li>
+            <li>Mairy Jane running national conference networking</li>
+          </ul>
+        </div>
+        <div>
+          <div class="wave-col-title">Global, The Legacy</div>
+          <ul class="wave-list">
+            <li>Annual Rollagram Conference, the industry's defining event</li>
+            <li>Cannabis hotels and cultural centers licensed globally</li>
+            <li>WAVMVMT Centers as community anchors in key markets</li>
+            <li>SET Ventures international capital advisory relationships</li>
+            <li>Mairy Jane as the global cannabis networking standard</li>
+            <li>The first fully integrated cannabis industry ecosystem</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-dark">
+    <div class="cta-eyebrow">The Entry Point</div>
+    <div class="cta-title">$500K Gets You Into All of It</div>
+    <div class="cta-body">One founding LP partner entering through the MCA structure does not just receive equity in Rollagram and Mairy Jane. They become the first node in a capital, culture, AI, and infrastructure ecosystem that is designed to compound across the entire cannabis industry in Canada, the United States, and beyond. The founding partner price today is the most valuable entry point this ecosystem will ever offer.</div>
+    <div class="cta-pills">
+      <span class="cta-pill">Rollagram Equity</span>
+      <span class="cta-pill">Mairy Jane Equity</span>
+      <span class="cta-pill">SET Ventures Capital Access</span>
+      <span class="cta-pill">WAVMVMT Cultural Network</span>
+      <span class="cta-pill">Direct Lender Relationships</span>
+      <span class="cta-pill">15 Day Close</span>
+    </div>
+  </div>
+
+</div>
+</div><!-- end tab-capital -->
+
+
 
 
 <script>

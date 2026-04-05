@@ -1040,41 +1040,45 @@ body {
 
 
 <!-- ═══════════════════════════════════════
-     TAB 2 — LP QUALIFIER
+     TAB 2 — LP QUALIFIER (CORRECTED & SOURCED)
 ═══════════════════════════════════════ -->
 <div id="tab-qualifier" class="tab-panel">
 <div class="qualifier">
 
   <div class="qual-hdr">
-    <div class="qual-h1">LP Qualifier and Deal Calculator</div>
-    <div class="qual-sub">Enter an LP or dispensary operator's annual revenue to instantly calculate whether they qualify for the $1M MCA structure, what their working capital and repayment looks like, and what equity they would receive in Rollagram and Mairy Jane.</div>
+    <div class="qual-h1">LP Qualifier and Capital Calculator</div>
+    <div class="qual-sub">All data sourced and verified as of April 2026. MCA advances are sized on average monthly revenue (bank deposits), not annual. Most Ontario dispensaries average $97K to $103K per month, qualifying for $50K to $125K advances. Multi-location operators or high-volume stores at $400K or more per month can reach $500K to $1M. Enter monthly figures for accuracy.</div>
+  </div>
+
+  <!-- ACCURACY CALLOUT -->
+  <div style="background:#FEF0E8;border-left:4px solid #C44E18;border-radius:0 8px 8px 0;padding:16px 20px;margin-bottom:28px;">
+    <div style="font-size:12px;color:#444;line-height:1.7;"><strong style="color:#7a2a00;">MCA is monthly, not annual.</strong> A Merchant Cash Advance is structured as a purchase of future receivables, sized to your average monthly bank deposits, typically 50 to 120 percent of one month's revenue. Factor rates of 1.1x to 1.5x apply to the advance amount. In Canada, MCAs structured as corporate loans above $500K have no interest rate cap under s.347 of the Criminal Code (Jan 2025 amendment). Below $500K corporate loans the cap is 48% APR. Consumer loans are capped at 35% APR. Sources: McMillan LLP, McCarthy Tetrault, Criminal Code Canada s.347.</div>
   </div>
 
   <!-- CALCULATOR -->
   <div class="calc-wrap">
-    <div class="calc-eyebrow">MCA Qualification Calculator</div>
-    <div class="calc-title">How much does this LP make?</div>
+    <div class="calc-eyebrow">MCA Qualification Calculator, Monthly Revenue Based</div>
+    <div class="calc-title">What is this operator's average monthly revenue?</div>
     <div class="input-row">
       <div class="input-group">
-        <div class="input-label">Annual Revenue (CAD or USD)</div>
-        <input class="input-field" id="annualRev" type="number" placeholder="e.g. 6000000" oninput="calculate()">
-        <div class="input-hint">Enter the LP or operator's total gross annual revenue</div>
+        <div class="input-label">Avg Monthly Revenue (CAD or USD)</div>
+        <input class="input-field" id="monthlyRev" type="number" placeholder="e.g. 400000" oninput="calculate()">
+        <div class="input-hint">Average monthly bank deposits over the last 3 to 6 months. Ontario average store: $97K to $250K per month. Source: Headset, OCS Annual Report, TechPOS.</div>
       </div>
       <div class="input-group">
         <div class="input-label">Number of Locations</div>
         <input class="input-field" id="locations" type="number" placeholder="e.g. 3" oninput="calculate()">
-        <div class="input-hint">More locations signals stronger operator to MCA lenders</div>
+        <div class="input-hint">More locations signals operational stability and increases advance capacity with most MCA lenders.</div>
       </div>
     </div>
     <button class="calc-btn" onclick="calculate()">
       <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="12" height="12" rx="2"/><path d="M5 8h6M8 5v6"/></svg>
-      Run Qualification
+      Calculate Qualification
     </button>
   </div>
 
   <!-- RESULTS -->
   <div class="results" id="results">
-
     <div class="verdict" id="verdict-box">
       <div class="verdict-icon" id="verdict-icon"></div>
       <div class="verdict-text">
@@ -1082,93 +1086,155 @@ body {
         <div class="verdict-detail" id="verdict-detail"></div>
       </div>
     </div>
-
     <div class="metrics" id="metrics-grid"></div>
-
     <div class="deal-box">
       <div class="deal-eyebrow">Full Deal Breakdown</div>
       <div class="deal-title" id="deal-title">The Proposed Structure</div>
       <div class="deal-rows" id="deal-rows"></div>
     </div>
+  </div>
 
+  <!-- ONTARIO MARKET CONTEXT -->
+  <div style="margin-bottom:40px;">
+    <div style="font-family:'Lora',Georgia,serif;font-size:20px;font-weight:700;color:var(--green);margin-bottom:6px;">Ontario Market Context, Verified April 2026</div>
+    <div style="font-size:12px;color:var(--ink-lt);margin-bottom:16px;line-height:1.6;">What the average and high-performing Ontario cannabis operator actually looks like as a capital candidate. All figures sourced from AGCO, OCS Annual Reports, Headset.io, and TechPOS Canada.</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px;">
+      <div class="stat-card"><span class="stat-n">1,829</span><span class="stat-l">AGCO retail authorizations as of Feb 2026. Source: AGCO, cannabusinessplans.com</span></div>
+      <div class="stat-card"><span class="stat-n">$2.15B</span><span class="stat-l">Ontario cannabis retail sales in 2024. Source: OCS Annual Report 2023-2024</span></div>
+      <div class="stat-card"><span class="stat-n">~$100K</span><span class="stat-l">Average monthly revenue per store (2024 average). Source: OCS data, Headset Dec 2025</span></div>
+      <div class="stat-card"><span class="stat-n">$1.98M to $12.9M</span><span class="stat-l">Annual revenue range per store. Source: TechPOS Canada citing Thrive Advisors</span></div>
+    </div>
+    <div style="background:var(--gold-lt);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;padding:14px 18px;font-size:11px;color:var(--ink-mid);line-height:1.7;">
+      <strong style="color:#7a5200;">Reality check for Ontario operators.</strong> The average Ontario dispensary generates roughly $1.17M per year or about $97K per month (calculated from $2.15B across 1,829 stores, OCS 2024 data). At 100% of monthly revenue, this qualifies a typical store for an MCA advance of roughly $97K to $100K, not $1M. To reach a $1M MCA, an operator needs combined monthly deposits of approximately $700K to $1M across their business, which typically means either a very high-volume single location (top 10 to 15 percentile) or a multi-location group with 5 or more stores. Headset reports December 2025 Ontario monthly sales of $188.3M across approximately 1,829 stores.
+    </div>
   </div>
 
   <!-- TARGET PROFILES -->
-  <div style="margin-bottom: 40px;">
-    <div class="profiles-hdr">Ideal LP Target Profiles</div>
-    <div class="profiles-sub">The operator types most likely to qualify, close fast, and align with the Rollagram mission.</div>
+  <div style="margin-bottom:40px;">
+    <div style="font-family:'Lora',Georgia,serif;font-size:20px;font-weight:700;color:var(--green);margin-bottom:6px;">Ideal LP Target Profiles for the $1M MCA Play</div>
+    <div style="font-size:12px;color:var(--ink-lt);margin-bottom:20px;">Based on verified MCA underwriting criteria: 50 to 120 percent of average monthly deposits, minimum 6 months operating history, consistent bank statements. Sources: Merchant Growth Canada, Mehmi Group, Advance Funds Network, Upwise Capital.</div>
     <div class="profiles">
       <div class="profile-card ideal">
         <div class="profile-type">Best Fit</div>
-        <div class="profile-name">Multi Location Dispensary Group</div>
+        <div class="profile-name">Multi-Location Dispensary Group</div>
         <div class="profile-rows">
-          <div class="profile-row"><div class="profile-key">Annual Revenue</div><div class="profile-val">$8M to $25M+</div></div>
-          <div class="profile-row"><div class="profile-key">Locations</div><div class="profile-val">3 to 10 stores</div></div>
-          <div class="profile-row"><div class="profile-key">MCA Capacity</div><div class="profile-val">$1M to $2.5M</div></div>
-          <div class="profile-row"><div class="profile-key">Close Time</div><div class="profile-val">5 to 10 business days</div></div>
-          <div class="profile-row"><div class="profile-key">Why It Works</div><div class="profile-val">Consistent daily receivables, strong cash flow, multiple revenue sites signal stability to MCA lenders</div></div>
+          <div class="profile-row"><div class="profile-key">Monthly Revenue</div><div class="profile-val">$700K to $1.5M combined</div></div>
+          <div class="profile-row"><div class="profile-key">Annual Revenue</div><div class="profile-val">$8.4M to $18M</div></div>
+          <div class="profile-row"><div class="profile-key">Locations</div><div class="profile-val">5 to 10 stores</div></div>
+          <div class="profile-row"><div class="profile-key">MCA Capacity</div><div class="profile-val">$700K to $1.5M (100% of monthly)</div></div>
+          <div class="profile-row"><div class="profile-key">Close Time</div><div class="profile-val">3 to 7 business days</div></div>
+          <div class="profile-row"><div class="profile-key">Why It Works</div><div class="profile-val">Multiple revenue streams, consistent combined deposits, multi-location stability signals strength to MCA lenders. This is the primary target for the $1M play.</div></div>
         </div>
       </div>
       <div class="profile-card good">
         <div class="profile-type">Strong Fit</div>
-        <div class="profile-name">Licensed Producer with Retail Distribution</div>
+        <div class="profile-name">High-Volume Single Location</div>
         <div class="profile-rows">
-          <div class="profile-row"><div class="profile-key">Annual Revenue</div><div class="profile-val">$6M to $20M</div></div>
-          <div class="profile-row"><div class="profile-key">Channels</div><div class="profile-val">OCS, private retail, direct</div></div>
-          <div class="profile-row"><div class="profile-key">MCA Capacity</div><div class="profile-val">$800K to $2M</div></div>
-          <div class="profile-row"><div class="profile-key">Close Time</div><div class="profile-val">7 to 14 business days</div></div>
-          <div class="profile-row"><div class="profile-key">Why It Works</div><div class="profile-val">Volume revenue, but OCS payment terms can slow approval. Need to show direct sales stream for best rates</div></div>
+          <div class="profile-row"><div class="profile-key">Monthly Revenue</div><div class="profile-val">$400K to $800K per store</div></div>
+          <div class="profile-row"><div class="profile-key">Annual Revenue</div><div class="profile-val">$4.8M to $9.6M</div></div>
+          <div class="profile-row"><div class="profile-key">Context</div><div class="profile-val">Top 10 to 15% of Ontario stores by volume</div></div>
+          <div class="profile-row"><div class="profile-key">MCA Capacity</div><div class="profile-val">$400K to $900K (100 to 120% of monthly)</div></div>
+          <div class="profile-row"><div class="profile-key">Close Time</div><div class="profile-val">3 to 5 business days</div></div>
+          <div class="profile-row"><div class="profile-key">Why It Works</div><div class="profile-val">High daily cash flow, consistent card transactions, strong daily receivables. May require a second LP or blended capital stack to reach full $1M. Can likely reach $500K to $700K independently.</div></div>
         </div>
       </div>
       <div class="profile-card possible">
-        <div class="profile-type">Possible Fit</div>
-        <div class="profile-name">Single Location Dispensary, High Volume</div>
+        <div class="profile-type">Scaled Play</div>
+        <div class="profile-name">Licensed Producer with OCS Distribution</div>
         <div class="profile-rows">
-          <div class="profile-row"><div class="profile-key">Annual Revenue</div><div class="profile-val">$3M to $6M</div></div>
-          <div class="profile-row"><div class="profile-key">Locations</div><div class="profile-val">1, high foot traffic</div></div>
-          <div class="profile-row"><div class="profile-key">MCA Capacity</div><div class="profile-val">$400K to $800K</div></div>
-          <div class="profile-row"><div class="profile-key">Close Time</div><div class="profile-val">5 to 7 business days</div></div>
-          <div class="profile-row"><div class="profile-key">Why It Works</div><div class="profile-val">May require a second LP partner or a different split to reach $1M total. Can still run the play at a smaller scale as proof of concept</div></div>
+          <div class="profile-row"><div class="profile-key">Monthly Revenue</div><div class="profile-val">$300K to $700K (30 to 45 day OCS terms)</div></div>
+          <div class="profile-row"><div class="profile-key">Annual Revenue</div><div class="profile-val">$3.6M to $8.4M</div></div>
+          <div class="profile-row"><div class="profile-key">MCA Capacity</div><div class="profile-val">$250K to $600K (lower advance due to OCS payment terms)</div></div>
+          <div class="profile-row"><div class="profile-key">Better Product</div><div class="profile-val">Invoice or AR financing against OCS receivables may be more effective than MCA for LPs with long payment cycles</div></div>
+          <div class="profile-row"><div class="profile-key">Close Time</div><div class="profile-val">7 to 14 business days</div></div>
         </div>
       </div>
       <div class="profile-card unlikely">
-        <div class="profile-type">Needs More Time</div>
-        <div class="profile-name">Emerging Operator, Under 2 Years</div>
+        <div class="profile-type">Future Pipeline</div>
+        <div class="profile-name">Average Single-Store Operator</div>
         <div class="profile-rows">
-          <div class="profile-row"><div class="profile-key">Annual Revenue</div><div class="profile-val">Under $2M</div></div>
-          <div class="profile-row"><div class="profile-key">Operating History</div><div class="profile-val">Less than 24 months</div></div>
-          <div class="profile-row"><div class="profile-key">MCA Capacity</div><div class="profile-val">Likely under $300K</div></div>
-          <div class="profile-row"><div class="profile-key">Strategy</div><div class="profile-val">Flag for future raise, focus their equity conversation on Rollagram growth before capital structure</div></div>
+          <div class="profile-row"><div class="profile-key">Monthly Revenue</div><div class="profile-val">$80K to $200K (Ontario average band)</div></div>
+          <div class="profile-row"><div class="profile-key">Annual Revenue</div><div class="profile-val">$960K to $2.4M</div></div>
+          <div class="profile-row"><div class="profile-key">MCA Capacity</div><div class="profile-val">$40K to $240K at 50 to 120% of monthly</div></div>
+          <div class="profile-row"><div class="profile-key">Strategy</div><div class="profile-val">Right candidate for smaller MCA or equipment financing. Target with Rollagram onboarding, build relationship, introduce to SET Ventures as they scale. The $1M play returns when they reach 3 to 5 locations.</div></div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- QUICK REFERENCE -->
-  <div>
-    <div class="qref-hdr">MCA Quick Reference Table</div>
-    <div class="qref-sub">Approximate MCA advance capacity by annual revenue. Cannabis operators with strong daily cash flow often qualify at the higher end of these ranges.</div>
+  <!-- QUICK REFERENCE TABLE -->
+  <div style="margin-bottom:40px;">
+    <div class="qref-hdr">MCA Quick Reference Table, Monthly Revenue Based</div>
+    <div class="qref-sub">Approximate MCA capacity by average monthly revenue. Factor of 1.0x to 1.2x monthly is conservative and realistic for cannabis operators. All figures based on publicly available MCA underwriting guidance. Sources: Mehmi Group, Merchant Growth, Advance Funds Network, Upwise Capital (cannabis-specific), Lending Valley 2026.</div>
     <table class="qref-table">
       <thead>
         <tr>
-          <th>Annual Revenue</th>
-          <th>Monthly Revenue</th>
-          <th>MCA Capacity (1x Monthly)</th>
-          <th>MCA Capacity (1.5x Monthly)</th>
+          <th>Avg Monthly Revenue</th>
+          <th>Est. Annual Revenue</th>
+          <th>MCA at 100% Monthly</th>
+          <th>MCA at 120% Monthly</th>
+          <th>Factor 1.3x Total Repay</th>
           <th>$1M Play</th>
-          <th>Darren's Verdict</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td>$2M</td><td>$167K</td><td>$167K</td><td>$250K</td><td class="no">Not Yet</td><td>Too early, explore future onboarding</td></tr>
-        <tr><td>$3M</td><td>$250K</td><td>$250K</td><td>$375K</td><td class="marg">Partial</td><td>Could run a scaled version, explore second LP</td></tr>
-        <tr><td>$4M</td><td>$333K</td><td>$333K</td><td>$500K</td><td class="marg">Marginal</td><td>Possible with aggressive lender, tight on repayment</td></tr>
-        <tr><td>$6M</td><td>$500K</td><td>$500K</td><td>$750K</td><td class="marg">Close</td><td>Strong candidate, push for $750K to $1M with right lender</td></tr>
-        <tr><td>$8M</td><td>$667K</td><td>$667K</td><td>$1M</td><td class="qual">Yes</td><td>Solid qualification, run the play</td></tr>
-        <tr><td>$10M</td><td>$833K</td><td>$833K</td><td>$1.25M</td><td class="qual">Strong Yes</td><td>Ideal candidate, could structure larger</td></tr>
-        <tr><td>$15M+</td><td>$1.25M+</td><td>$1.25M+</td><td>$1.875M+</td><td class="qual">Premium</td><td>Consider a larger total advance, equity conversation deepens</td></tr>
+        <tr><td>$50K to $100K</td><td>$600K to $1.2M</td><td>$50K to $100K</td><td>$60K to $120K</td><td>$65K to $156K</td><td class="no">No, future candidate</td></tr>
+        <tr><td>$100K to $200K</td><td>$1.2M to $2.4M</td><td>$100K to $200K</td><td>$120K to $240K</td><td>$156K to $312K</td><td class="no">No, standard MCA range</td></tr>
+        <tr><td>$200K to $350K</td><td>$2.4M to $4.2M</td><td>$200K to $350K</td><td>$240K to $420K</td><td>$312K to $546K</td><td class="marg">Partial, may need 2 LPs</td></tr>
+        <tr><td>$350K to $500K</td><td>$4.2M to $6M</td><td>$350K to $500K</td><td>$420K to $600K</td><td>$546K to $780K</td><td class="marg">Scaling toward $1M</td></tr>
+        <tr><td>$500K to $700K</td><td>$6M to $8.4M</td><td>$500K to $700K</td><td>$600K to $840K</td><td>$780K to $1.09M</td><td class="qual">Approaching, run the play</td></tr>
+        <tr><td>$700K to $1M</td><td>$8.4M to $12M</td><td>$700K to $1M</td><td>$840K to $1.2M</td><td>$1.09M to $1.56M</td><td class="qual">Yes, full $1M play</td></tr>
+        <tr><td>$1M plus</td><td>$12M plus</td><td>$1M plus</td><td>$1.2M plus</td><td>$1.56M plus</td><td class="qual">Premium, consider larger structure</td></tr>
       </tbody>
     </table>
+  </div>
+
+  <!-- SOURCES -->
+  <div style="background:var(--cream-d);border-radius:10px;padding:24px;border:1px solid var(--border);">
+    <div style="font-family:'Lora',Georgia,serif;font-size:16px;font-weight:700;color:var(--green);margin-bottom:12px;">Sources and References</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+      <div>
+        <div style="font-family:var(--mono);font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px;">Canada MCA and Lending</div>
+        <div style="font-size:11px;color:var(--ink-lt);line-height:1.8;">
+          Mehmi Group, MCA Canada Guide, Dec 2025, mehmigroup.com<br>
+          Advance Funds Network, MCA Retailers Guide, April 2025, advancefundsnetwork.com<br>
+          Merchant Growth, Cannabis Financing Canada, merchantgrowth.com<br>
+          Upwise Capital, Cannabis MCA Funding, Aug 2025, upwisecapital.com<br>
+          Lending Valley, MCA Guide 2026, lendingvalley.com
+        </div>
+      </div>
+      <div>
+        <div style="font-family:var(--mono);font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px;">Canada Legal Compliance</div>
+        <div style="font-size:11px;color:var(--ink-lt);line-height:1.8;">
+          Criminal Code Canada, s.347, laws-lois.justice.gc.ca (current to Mar 2026)<br>
+          McMillan LLP, New Criminal Rate Jan 2025, mcmillan.ca<br>
+          McCarthy Tetrault, Amendments Criminal Rate, Jan 2025, mccarthy.ca<br>
+          Dentons, New Year New Limits, Feb 2025, dentons.com<br>
+          Reynolds Mirth Richards Farmer LLP, Oct 2025, rmrf.com
+        </div>
+      </div>
+      <div>
+        <div style="font-family:var(--mono);font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px;">Ontario Cannabis Market Data</div>
+        <div style="font-size:11px;color:var(--ink-lt);line-height:1.8;">
+          OCS Annual Report 2023-2024, doingbusinesswithocs.ca<br>
+          AGCO Retail Store Authorizations, Feb 2026, agco.ca<br>
+          Headset.io, Ontario Cannabis Prices and Trends, Dec 2025<br>
+          Cannabis Business Plans, Ontario Cannabis Market, Feb 2026, cannabusinessplans.com<br>
+          TechPOS Canada, Dispensary Revenue Data, techpos.ca
+        </div>
+      </div>
+      <div>
+        <div style="font-family:var(--mono);font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px;">US Cannabis and Capital</div>
+        <div style="font-size:11px;color:var(--ink-lt);line-height:1.8;">
+          Cova Software, Where is Cannabis Legal in North America 2026, covasoftware.com<br>
+          California Blendz, US Cannabis Laws 2026, californiablendz.com<br>
+          United Capital Source, Cannabis Business Loans 2026, unitedcapitalsource.com<br>
+          FundCanna, Cannabis Financing, fundcanna.com<br>
+          AmeriCU Credit Union, Cannabis Lending, americu.org<br>
+          Grand View Research, US Cannabis Market 2024, via unitedcapitalsource.com
+        </div>
+      </div>
+    </div>
   </div>
 
 </div>
@@ -1213,94 +1279,211 @@ body {
   <div class="cw-sec">
     <div class="sec-hdr">
       <div class="sec-n">02</div>
-      <div class="sec-t">The Full Capital Stack We Can Facilitate</div>
-      <span class="tag tb">Every Stage of Growth</span>
+      <div class="sec-t">The Full Capital Stack, All Products Explained</div>
+      <span class="tag tb">Verified, April 2026</span>
     </div>
+
+    <div style="background:var(--gold-lt);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:14px 18px;margin-bottom:20px;font-size:12px;color:#444;line-height:1.7;">
+      <strong style="color:#7a5200;">Canada Compliance Note, Critical.</strong> As of January 1, 2025, Canada's Criminal Code s.347 sets a criminal interest rate cap. Consumer loans: 35% APR max. Corporate loans $10K to $500K: 48% APR max. Corporate loans above $500K: no cap (exempt). MCA structured as purchase of future receivables to corporations is generally outside the loan definition, but structure carefully with legal counsel. Sources: McMillan LLP, McCarthy Tetrault, Criminal Code Canada s.347, Reynolds Mirth Richards Farmer LLP.
+    </div>
+
     <div class="cap-grid">
       <div class="cap-card">
-        <div class="cap-type">Fast Access Capital</div>
+        <div class="cap-type">Fast Access Capital, Canada and US</div>
         <div class="cap-name">Merchant Cash Advance</div>
-        <div class="cap-range">$50K to $2M</div>
-        <div class="cap-desc">The fastest capital product available to cannabis operators. Approval is based on revenue history, not credit score, and funds can be in the operator's account within 3 to 7 business days. Cannabis businesses are ideal MCA candidates because they are cash heavy, high volume, and have consistent daily receivables. SET Ventures and WAVMVMT hold direct relationships with MCA providers who are active and comfortable in the cannabis space across both Canada and the United States.</div>
+        <div class="cap-range">$10K to $2M+ (sized on monthly revenue)</div>
+        <div class="cap-desc">An MCA is not a loan. It is the purchase of future receivables at a discount. The advance is sized as 50 to 120 percent of your average monthly bank deposits, not annual revenue. Cannabis dispensaries are excellent MCA candidates due to high-volume daily card transactions. Canada providers include 2M7 Financial Solutions, Merchant Growth, and Advance Funds Network. US providers include FundCanna, Clarify Capital, United Capital Source, and Paybotic (cannabis-specific). Factor rates of 1.1x to 1.5x are standard. Holdback is 10 to 20 percent of daily card sales or fixed ACH. Most cannabis operators fund in 3 to 7 business days.</div>
         <div class="cap-specs">
-          <div class="cap-spec"><div class="cap-spec-key">Close Time</div><div class="cap-spec-val">3 to 7 business days</div></div>
-          <div class="cap-spec"><div class="cap-spec-key">Factor Rate</div><div class="cap-spec-val">1.15x to 1.5x depending on revenue profile</div></div>
-          <div class="cap-spec"><div class="cap-spec-key">Repayment</div><div class="cap-spec-val">10 to 20 percent of daily receivables, automated</div></div>
-          <div class="cap-spec"><div class="cap-spec-key">Qualification</div><div class="cap-spec-val">Minimum 6 months operating, $500K plus annual revenue</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Close Time</div><div class="cap-spec-val">3 to 7 business days after application</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Advance Size</div><div class="cap-spec-val">50 to 120 percent of avg monthly deposits</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Factor Rate</div><div class="cap-spec-val">1.10x to 1.50x (cannabis: typically 1.25 to 1.40)</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Holdback</div><div class="cap-spec-val">10 to 20 percent of daily card sales or fixed ACH</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Min Monthly Rev</div><div class="cap-spec-val">$10K minimum, $50K plus for meaningful advance</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Canada Compliance</div><div class="cap-spec-val">Above $500K corporate advances have no APR cap. Below $500K structured as corporate loan: 48% APR cap. Below $10K: 35% APR cap.</div></div>
         </div>
-        <div class="cap-use-title">Cannabis Industry Use Cases</div>
+        <div class="cap-use-title">Cannabis Use Cases</div>
         <div class="cap-uses">
-          <span class="cap-use">Inventory Expansion</span>
-          <span class="cap-use">Staff and Payroll</span>
-          <span class="cap-use">Marketing Campaigns</span>
-          <span class="cap-use">Rollagram Onboarding Capital</span>
-          <span class="cap-use">Seasonal Cash Flow</span>
-          <span class="cap-use">New Product Launches</span>
+          <span class="cap-use">Inventory and product purchasing</span>
+          <span class="cap-use">Staff, payroll, and seasonal hiring</span>
+          <span class="cap-use">Marketing and sampling events</span>
+          <span class="cap-use">280E tax payment bridging (US)</span>
+          <span class="cap-use">Rollagram platform onboarding costs</span>
+          <span class="cap-use">Cash flow gap coverage</span>
         </div>
       </div>
       <div class="cap-card bridge">
-        <div class="cap-type">Mid Scale Capital</div>
-        <div class="cap-name">Bridge Loans</div>
-        <div class="cap-range">$2M to $25M+</div>
-        <div class="cap-desc">Bridge loans are the capital product that enables serious cannabis operators to make aggressive moves, acquiring new licenses, expanding into new provinces or US states, building out dispensary locations, or bridging the gap while waiting on real estate refinancing. SET Ventures specializes in commercial bridge lending at this scale and connects cannabis operators to institutional lenders through established relationships, dramatically shortening the time from need to funding compared to traditional channels.</div>
+        <div class="cap-type">Mid-Scale Capital, Canada and US</div>
+        <div class="cap-name">Bridge Loans and Private Lending</div>
+        <div class="cap-range">$500K to $25M+ (SET Ventures specialty)</div>
+        <div class="cap-desc">Bridge loans are short-term debt facilities secured by assets, used to fund growth moves before longer-term capital is available. For cannabis operators, collateral can include real estate, licensed premises, equipment, and in some cases the cannabis license itself as partial collateral. SET Ventures specializes in commercial bridge lending at the $2M to $25M plus range through direct private lender relationships. Canada: traditional banks will not bridge cannabis properties. Private lenders and family offices fill this gap at 10 to 18 percent interest. US: cannabis-specific lenders like FundCanna, cannabis REITs like Innovative Industrial Properties, and private credit funds serve this segment.</div>
         <div class="cap-specs">
-          <div class="cap-spec"><div class="cap-spec-key">Close Time</div><div class="cap-spec-val">2 to 6 weeks depending on collateral</div></div>
-          <div class="cap-spec"><div class="cap-spec-key">Term</div><div class="cap-spec-val">3 to 24 months, interest only structures available</div></div>
-          <div class="cap-spec"><div class="cap-spec-key">Collateral</div><div class="cap-spec-val">Real estate, licenses, equipment, receivables</div></div>
-          <div class="cap-spec"><div class="cap-spec-key">Qualification</div><div class="cap-spec-val">Established operator, 2 plus years, verifiable assets</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Close Time</div><div class="cap-spec-val">2 to 8 weeks depending on due diligence and collateral</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Term</div><div class="cap-spec-val">3 to 24 months, interest-only available</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Rate</div><div class="cap-spec-val">10 to 20 percent annual (private, asset-backed)</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Collateral</div><div class="cap-spec-val">Real estate, licensed premises, equipment, receivables</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Qualification</div><div class="cap-spec-val">2 plus years operating, verifiable assets and income</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Canada Compliance</div><div class="cap-spec-val">Loans above $500K to corporations are fully exempt from s.347 criminal rate cap as of Jan 1, 2025</div></div>
         </div>
-        <div class="cap-use-title">Cannabis Industry Use Cases</div>
+        <div class="cap-use-title">Cannabis Use Cases</div>
         <div class="cap-uses">
-          <span class="cap-use">License Acquisition</span>
-          <span class="cap-use">Multi-Location Expansion</span>
-          <span class="cap-use">Provincial or State Entry</span>
-          <span class="cap-use">Cannabis Cafe Build-Out</span>
-          <span class="cap-use">Real Estate Bridge</span>
-          <span class="cap-use">Dispensary Acquisition</span>
+          <span class="cap-use">New license acquisition</span>
+          <span class="cap-use">Multi-location expansion</span>
+          <span class="cap-use">US state market entry</span>
+          <span class="cap-use">Cannabis cafe or hotel development</span>
+          <span class="cap-use">Dispensary acquisition</span>
+          <span class="cap-use">Grow facility construction bridge</span>
         </div>
       </div>
       <div class="cap-card equip">
-        <div class="cap-type">Asset Based Capital</div>
+        <div class="cap-type">Asset-Based Capital, Canada and US</div>
         <div class="cap-name">Equipment Financing</div>
-        <div class="cap-range">$25K to $3M</div>
-        <div class="cap-desc">Cannabis operators need specialized equipment at every stage of the supply chain, from cultivation and extraction to retail point of sale systems and delivery vehicles. Equipment financing allows operators to acquire the tools they need without depleting working capital, using the equipment itself as collateral. This product is often available even to operators who cannot access other forms of financing, because the asset secures the loan directly. SET Ventures and partners can facilitate equipment loans across both Canada and the United States for cannabis-adjacent hardware and infrastructure.</div>
+        <div class="cap-range">$5K to $3M (equipment as collateral)</div>
+        <div class="cap-desc">Equipment financing is one of the most accessible capital products for cannabis operators because the equipment itself secures the loan, reducing lender risk. Available even to operators who cannot access other forms of financing. In Canada, providers include BDC (Business Development Bank), equipment finance brokers, and specialized cannabis lenders. In the US, AmeriCU Credit Union (New York) offers cannabis equipment loans from $5K to $250K. FundCanna and United Capital Source facilitate equipment financing alongside MCA products. Terms of 24 to 84 months are standard. Operators own the equipment at the end of term.</div>
         <div class="cap-specs">
           <div class="cap-spec"><div class="cap-spec-key">Close Time</div><div class="cap-spec-val">5 to 15 business days</div></div>
-          <div class="cap-spec"><div class="cap-spec-key">Term</div><div class="cap-spec-val">24 to 84 months, ownership at end of term</div></div>
-          <div class="cap-spec"><div class="cap-spec-key">Coverage</div><div class="cap-spec-val">Up to 100 percent of equipment value</div></div>
-          <div class="cap-spec"><div class="cap-spec-key">Qualification</div><div class="cap-spec-val">Equipment as collateral, personal guarantee often sufficient</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Term</div><div class="cap-spec-val">24 to 84 months, fixed monthly payments</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Coverage</div><div class="cap-spec-val">Up to 100 percent of equipment cost</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Rate</div><div class="cap-spec-val">8 to 25 percent depending on credit and equipment type</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Qualification</div><div class="cap-spec-val">Equipment serves as collateral, personal guarantee common</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">US Source</div><div class="cap-spec-val">AmeriCU: $5K to $250K cannabis equipment. FundCanna and Clarify Capital: cannabis equipment up to $2M+</div></div>
         </div>
-        <div class="cap-use-title">Cannabis Industry Use Cases</div>
+        <div class="cap-use-title">Cannabis Use Cases</div>
         <div class="cap-uses">
-          <span class="cap-use">Cultivation Lighting and HVAC</span>
-          <span class="cap-use">Extraction Equipment</span>
-          <span class="cap-use">POS and Compliance Systems</span>
-          <span class="cap-use">Packaging and Processing</span>
-          <span class="cap-use">Delivery Fleet</span>
-          <span class="cap-use">Lab and Testing Equipment</span>
+          <span class="cap-use">Cultivation lighting and HVAC</span>
+          <span class="cap-use">Extraction and processing equipment</span>
+          <span class="cap-use">POS and compliance systems</span>
+          <span class="cap-use">Security and surveillance hardware</span>
+          <span class="cap-use">Delivery fleet and vehicles</span>
+          <span class="cap-use">Lab and testing equipment</span>
         </div>
       </div>
       <div class="cap-card commercial">
-        <div class="cap-type">Real Estate Capital</div>
-        <div class="cap-name">Commercial Lending</div>
-        <div class="cap-range">$500K to $50M+</div>
-        <div class="cap-desc">As cannabis culture matures into the experiential economy, the physical infrastructure needs to match. Cannabis cafes, cannabis hotels, flagship dispensary locations, grow campuses, and branded cultural centers all require commercial real estate financing. Traditional banks will not provide this for cannabis related properties in most cases. SET Ventures connects operators and developers to specialized commercial lenders, family offices, and private credit facilities that understand the cannabis real estate market and can structure creative financing solutions across Canada and the United States.</div>
+        <div class="cap-type">Real Estate Capital, Canada and US</div>
+        <div class="cap-name">Commercial Real Estate Financing</div>
+        <div class="cap-range">$500K to $50M+ (private lenders and REITs)</div>
+        <div class="cap-desc">Traditional banks will not mortgage cannabis properties in Canada or the US in most cases. The gap is filled by private lenders, family offices, and cannabis-specific REITs. In the US, Innovative Industrial Properties (IIPR) is a cannabis REIT that purchases properties and leases them back to operators (sale-leaseback). Power REIT also operates in this space. In Canada, private mortgage brokers and hard money lenders serve cannabis real estate at LTVs up to 65 to 75 percent. AmeriCU Credit Union (New York) offers cannabis commercial mortgages for owner-occupied dispensaries and cultivation facilities. SET Ventures connects operators to private credit and family office capital for this segment.</div>
         <div class="cap-specs">
           <div class="cap-spec"><div class="cap-spec-key">Close Time</div><div class="cap-spec-val">4 to 12 weeks depending on structure</div></div>
-          <div class="cap-spec"><div class="cap-spec-key">LTV</div><div class="cap-spec-val">Up to 75 percent loan to value on qualifying properties</div></div>
-          <div class="cap-spec"><div class="cap-spec-key">Structures</div><div class="cap-spec-val">First mortgage, mezzanine, construction, sale-leaseback</div></div>
-          <div class="cap-spec"><div class="cap-spec-key">Markets</div><div class="cap-spec-val">Canada nationwide and US recreational states</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">LTV</div><div class="cap-spec-val">55 to 75 percent LTV on qualifying properties</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Structures</div><div class="cap-spec-val">First mortgage, mezzanine, sale-leaseback, construction</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">Rate</div><div class="cap-spec-val">12 to 18 percent private (Canada), REIT structures vary</div></div>
+          <div class="cap-spec"><div class="cap-spec-key">US REITs</div><div class="cap-spec-val">Innovative Industrial Properties (IIPR), Power REIT. Sale-leaseback allows operator to access equity in property while retaining occupancy</div></div>
         </div>
-        <div class="cap-use-title">Cannabis Industry Use Cases</div>
+        <div class="cap-use-title">Cannabis Use Cases</div>
         <div class="cap-uses">
-          <span class="cap-use">Flagship Dispensary Build-Out</span>
-          <span class="cap-use">Cannabis Cafe Development</span>
-          <span class="cap-use">Cannabis Hotel Projects</span>
-          <span class="cap-use">Grow Facility Construction</span>
-          <span class="cap-use">Cultural Center Development</span>
-          <span class="cap-use">WAVMVMT Centers</span>
+          <span class="cap-use">Flagship dispensary build-out</span>
+          <span class="cap-use">Cannabis cafe and lounge development</span>
+          <span class="cap-use">Cannabis hotel projects</span>
+          <span class="cap-use">Licensed grow facility construction</span>
+          <span class="cap-use">WAVMVMT Center development</span>
+          <span class="cap-use">Sale-leaseback for working capital</span>
         </div>
       </div>
+    </div>
+
+    <!-- ADDITIONAL STRATEGIES -->
+    <div style="margin-top:20px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;">
+      <div class="card">
+        <div style="font-family:var(--mono);font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:6px;">Canada Only</div>
+        <div style="font-family:var(--serif);font-size:16px;font-weight:700;color:var(--green);margin-bottom:8px;">Invoice and AR Financing</div>
+        <div style="font-size:11.5px;color:var(--ink-lt);line-height:1.65;margin-bottom:10px;">Licensed Producers selling through OCS face 30 to 45 day payment terms. AR financing advances 70 to 90 percent of invoice value immediately, with the balance paid on OCS settlement minus fees. Revolving structure. Ideal for LPs with consistent OCS purchase orders. Advance rate: 70 to 90 percent of invoice. Cost: 1.5 to 4 percent per 30 days. Source: cannabis business financing guides, GrowerIQ Canada.</div>
+        <div class="cap-uses"><span class="cap-use">OCS receivables bridge</span><span class="cap-use">LP cash flow</span><span class="cap-use">Production scaling</span></div>
+      </div>
+      <div class="card">
+        <div style="font-family:var(--mono);font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:6px;">Canada Government Programs</div>
+        <div style="font-family:var(--serif);font-size:16px;font-weight:700;color:var(--blue);margin-bottom:8px;">BDC, SR&ED, IRAP</div>
+        <div style="font-size:11.5px;color:var(--ink-lt);line-height:1.65;margin-bottom:10px;">Since 2018, over CAD $170M in government grants and contributions have been provided to Canadian cannabis businesses. BDC (Business Development Bank of Canada) will work with some cannabis operators. SR&ED (Scientific Research and Experimental Development) provides tax credits for R&D on cultivation techniques, extraction technology, and product innovation. IRAP (NRC) funds innovation projects. Sustainable Canadian Agricultural Partnership funds some licensed producers. Source: cannabusinessplans.com, Government of Canada grants database.</div>
+        <div class="cap-uses"><span class="cap-use">SR&ED tax credits</span><span class="cap-use">IRAP innovation grants</span><span class="cap-use">BDC working capital</span><span class="cap-use">Agricultural partnership</span></div>
+      </div>
+      <div class="card">
+        <div style="font-family:var(--mono);font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:6px;">US Only</div>
+        <div style="font-family:var(--serif);font-size:16px;font-weight:700;color:var(--purple);margin-bottom:8px;">280E Bridge Loans</div>
+        <div style="font-size:11.5px;color:var(--ink-lt);line-height:1.65;margin-bottom:10px;">Section 280E of the US Tax Code prohibits cannabis businesses from deducting most ordinary business expenses, creating massive tax bills that strain cash flow. Many US cannabis operators take 280E bridge loans timed to quarterly and annual federal tax payments. FundCanna, Clarify Capital, and United Capital Source specialize in these. Structure: short-term 90 to 180 day advance timed to tax obligations. Trump's December 2025 executive order to expedite rescheduling to Schedule III would eliminate 280E entirely if passed. Source: covasoftware.com, mboventures.com.</div>
+        <div class="cap-uses"><span class="cap-use">Federal tax payment bridge</span><span class="cap-use">Quarterly 280E obligations</span><span class="cap-use">Cash flow protection</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- US STATE BY STATE -->
+  <div class="cw-sec">
+    <div class="sec-hdr">
+      <div class="sec-n">03</div>
+      <div class="sec-t">US State-by-State Cannabis Capital Landscape</div>
+      <span class="tag tb">April 2026, Verified</span>
+    </div>
+    <div style="background:var(--gold-lt);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:14px 18px;margin-bottom:20px;font-size:12px;color:#444;line-height:1.7;">
+      <strong style="color:#7a5200;">April 2026 Status.</strong> 24 states plus Washington DC have recreational cannabis. 38 states have some form of legal cannabis. No new recreational states were added in 2025. Minnesota launched adult-use retail in September 2025. Virginia passed a retail framework in March 2026 with sales starting January 2027. Florida remains medical only after its 2026 ballot initiative failed to qualify. Trump signed a December 2025 executive order to expedite rescheduling from Schedule I to Schedule III, pending as of April 2026. Sources: Cova Software, covasoftware.com April 2026, California Blendz US Cannabis Laws 2026.
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px;">
+      <div class="cap-card">
+        <div class="cap-type">Recreational, Largest Market</div>
+        <div class="cap-name" style="color:var(--green);">California</div>
+        <div style="font-size:11.5px;color:var(--ink-lt);line-height:1.6;margin-bottom:10px;">Largest cannabis market in the US. Most sophisticated lender ecosystem. Cannabis-specific lenders like FundCanna, Clarify Capital, and Clear Skies Capital are active. Economic impact estimated at nearly $10B annually. High regulatory burden and competitive saturation make it challenging for new entrants, but established operators have the widest access to capital products. California also has state equity programs providing grants to equity applicants. Source: Clear Skies Capital, California GO-Biz equity programs.</div>
+        <div class="cap-uses"><span class="cap-use">All MCA products</span><span class="cap-use">Equipment financing</span><span class="cap-use">Commercial RE</span><span class="cap-use">State equity grants available</span><span class="cap-use">Private credit active</span></div>
+      </div>
+      <div class="cap-card bridge">
+        <div class="cap-type">Recreational, Most Mature Banking</div>
+        <div class="cap-name" style="color:var(--blue);">Colorado</div>
+        <div style="font-size:11.5px;color:var(--ink-lt);line-height:1.6;margin-bottom:10px;">First state to fully legalize recreational cannabis in 2012. Most developed banking infrastructure for cannabis of any US state, with some state-chartered banks and credit unions actively serving the industry. Operators in Colorado have more traditional credit access than any other state. Mature market with stable regulatory framework. Some lenders offer term loans with rates closer to conventional business lending. Strong model for what the national industry can look like post-rescheduling.</div>
+        <div class="cap-uses"><span class="cap-use">Some traditional bank access</span><span class="cap-use">Credit union lending</span><span class="cap-use">All MCA products</span><span class="cap-use">Most capital-friendly state</span></div>
+      </div>
+      <div class="cap-card equip">
+        <div class="cap-type">Recreational, National Sales Leader</div>
+        <div class="cap-name" style="color:var(--gold);">Michigan</div>
+        <div style="font-size:11.5px;color:var(--ink-lt);line-height:1.6;margin-bottom:10px;">Michigan is described as a national leader in monthly cannabis sales with continued room for expansion. Market demand is strong and taxes are relatively lower than California, boosting operator profitability. This profitability makes Michigan operators strong MCA and equipment financing candidates. Cannabis banking remains limited to alternative lenders, but the lending ecosystem is active and competitive. Source: Cova Software North America 2026 guide.</div>
+        <div class="cap-uses"><span class="cap-use">High-volume MCA candidates</span><span class="cap-use">Equipment financing active</span><span class="cap-use">Private lending available</span><span class="cap-use">Strong profitability profile</span></div>
+      </div>
+      <div class="cap-card commercial">
+        <div class="cap-type">Recreational, Breakout Market</div>
+        <div class="cap-name" style="color:var(--purple);">Missouri</div>
+        <div style="font-size:11.5px;color:var(--ink-lt);line-height:1.6;margin-bottom:10px;">Missouri is described as a breakout success story with rapid growth, strong consumer demand, and manageable startup requirements. One of the most capital-friendly newer recreational markets. Licensing structure has created strong per-license revenue, making Missouri operators attractive borrowers for MCA lenders. First-mover advantage is still available for capital-backed operators looking to scale. Source: Cova Software North America 2026 guide.</div>
+        <div class="cap-uses"><span class="cap-use">MCA active market</span><span class="cap-use">First-mover capital opportunity</span><span class="cap-use">Strong per-license revenue</span><span class="cap-use">Equipment financing available</span></div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-type">Recreational, Just Launched Sept 2025</div>
+        <div class="cap-name" style="color:var(--green);">Minnesota</div>
+        <div style="font-size:11.5px;color:var(--ink-lt);line-height:1.6;margin-bottom:10px;">Adult-use retail launched in September 2025. Sales projected to reach $430M in 2026. Licensing bottlenecks mean significant first-mover opportunity remains for capital-backed early entrants. The market is early enough that alternative lenders are actively looking to build relationships with Minnesota cannabis operators before the market saturates. Source: Cova Software North America 2026.</div>
+        <div class="cap-uses"><span class="cap-use">Early-stage MCA opportunity</span><span class="cap-use">First-mover capital plays</span><span class="cap-use">$430M 2026 market projection</span><span class="cap-use">Licensing still available</span></div>
+      </div>
+      <div class="cap-card bridge">
+        <div class="cap-type">Recreational, Limited Licenses</div>
+        <div class="cap-name" style="color:var(--blue);">Illinois</div>
+        <div style="font-size:11.5px;color:var(--ink-lt);line-height:1.6;margin-bottom:10px;">Illinois issues new licenses annually and demand remains strong, especially outside Chicago. Limited license count drives very high per-license revenue, making Illinois operators among the strongest MCA and bridge loan candidates in the US. The equity licensing structure has created a mix of well-capitalized and underfunded operators, creating an active lending market. Highly competitive for capital. Source: Cova Software North America 2026.</div>
+        <div class="cap-uses"><span class="cap-use">High per-license revenue</span><span class="cap-use">Strong MCA candidates</span><span class="cap-use">Bridge loans for expansion</span><span class="cap-use">Equity program participants</span></div>
+      </div>
+      <div class="cap-card equip">
+        <div class="cap-type">Recreational, Rapid Growth</div>
+        <div class="cap-name" style="color:var(--gold);">New York</div>
+        <div style="font-size:11.5px;color:var(--ink-lt);line-height:1.6;margin-bottom:10px;">New York is approaching 600 open dispensaries as of early 2026. AmeriCU Credit Union (New York state-chartered) is one of the few credit unions in the US actively offering cannabis lending, including equipment loans ($5K to $250K) and commercial real estate financing for cannabis businesses. The market is maturing rapidly and competition is increasing, but the scale of the New York consumer market still makes it a high-revenue opportunity for established operators. Source: AmeriCU Cannabis Lending, Cova Software 2026.</div>
+        <div class="cap-uses"><span class="cap-use">AmeriCU credit union lending</span><span class="cap-use">Equipment loans available</span><span class="cap-use">Cannabis commercial RE</span><span class="cap-use">~600 dispensaries and growing</span></div>
+      </div>
+      <div class="cap-card commercial">
+        <div class="cap-type">Medical Only, Largest Untapped Market</div>
+        <div class="cap-name" style="color:var(--purple);">Florida</div>
+        <div style="font-size:11.5px;color:var(--ink-lt);line-height:1.6;margin-bottom:10px;">Florida remains the largest untapped recreational cannabis market in the US. The 2026 ballot initiative failed to qualify after the state Supreme Court declined to review an appeal in March 2026. Recreational cannabis remains a future opportunity. Florida currently operates a medical-only program with vertically integrated operators. Medical operators do have access to MCA and alternative financing. Once recreational passes, Florida will likely become the second or third largest cannabis market in the US. Source: Cova Software North America 2026, California Blendz US Cannabis Laws 2026.</div>
+        <div class="cap-uses"><span class="cap-use">Medical MCA available now</span><span class="cap-use">Largest future rec opportunity</span><span class="cap-use">Vertically integrated operators</span><span class="cap-use">Watch for 2027 ballot</span></div>
+      </div>
+    </div>
+    <div style="background:var(--cream-d);border-radius:10px;padding:20px 22px;border:1px solid var(--border);">
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:10px;">Additional Recreational States with Active Capital Markets</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;font-size:11.5px;color:var(--ink-mid);">
+        <span style="background:var(--green-lt);color:var(--green);padding:4px 10px;border-radius:100px;font-weight:500;">Arizona</span>
+        <span style="background:var(--green-lt);color:var(--green);padding:4px 10px;border-radius:100px;font-weight:500;">Nevada</span>
+        <span style="background:var(--green-lt);color:var(--green);padding:4px 10px;border-radius:100px;font-weight:500;">Massachusetts</span>
+        <span style="background:var(--green-lt);color:var(--green);padding:4px 10px;border-radius:100px;font-weight:500;">New Jersey</span>
+        <span style="background:var(--green-lt);color:var(--green);padding:4px 10px;border-radius:100px;font-weight:500;">Washington State</span>
+        <span style="background:var(--green-lt);color:var(--green);padding:4px 10px;border-radius:100px;font-weight:500;">Oregon</span>
+        <span style="background:var(--green-lt);color:var(--green);padding:4px 10px;border-radius:100px;font-weight:500;">Maryland</span>
+        <span style="background:var(--green-lt);color:var(--green);padding:4px 10px;border-radius:100px;font-weight:500;">Ohio</span>
+        <span style="background:var(--green-lt);color:var(--green);padding:4px 10px;border-radius:100px;font-weight:500;">Montana</span>
+        <span style="background:var(--green-lt);color:var(--green);padding:4px 10px;border-radius:100px;font-weight:500;">New Mexico</span>
+        <span style="background:var(--green-lt);color:var(--green);padding:4px 10px;border-radius:100px;font-weight:500;">Connecticut</span>
+        <span style="background:var(--green-lt);color:var(--green);padding:4px 10px;border-radius:100px;font-weight:500;">Maine</span>
+        <span style="background:var(--blue-lt);color:var(--blue);padding:4px 10px;border-radius:100px;font-weight:500;">Virginia (retail Jan 2027)</span>
+        <span style="background:var(--orange-lt);color:var(--orange);padding:4px 10px;border-radius:100px;font-weight:500;">Pennsylvania (medical, watching for rec)</span>
+        <span style="background:var(--orange-lt);color:var(--orange);padding:4px 10px;border-radius:100px;font-weight:500;">Oklahoma (medical)</span>
+      </div>
+      <div style="font-size:10.5px;color:var(--ink-faint);margin-top:10px;font-style:italic;">Source: Cova Software, covasoftware.com, Where is Cannabis Legal in North America 2026, April 2026. California Blendz, US Cannabis Laws 2026.</div>
     </div>
   </div>
 
@@ -1501,33 +1684,33 @@ function fmt(n) {
 }
 
 function calculate() {
-  const rev = parseFloat(document.getElementById('annualRev').value) || 0;
+  // MCA is sized on MONTHLY revenue (average monthly bank deposits)
+  // Advance = 50-120% of avg monthly revenue. Source: Mehmi Group, Merchant Growth, Upwise Capital
+  const monthly = parseFloat(document.getElementById('monthlyRev').value) || 0;
   const locs = parseInt(document.getElementById('locations').value) || 1;
-  if (!rev) { document.getElementById('results').classList.remove('visible'); return; }
+  if (!monthly) { document.getElementById('results').classList.remove('visible'); return; }
 
-  const monthly = rev / 12;
-  const factorRate = 1.35;
-  const advanceLow  = monthly * 1.0;
-  const advanceMid  = monthly * 1.4;
-  const advanceHigh = monthly * 1.8;
+  const rev = monthly * 12; // derived annual for reference only
+  const factorRate = 1.30; // typical cannabis MCA factor: 1.1-1.5x. Source: Lending Valley, Upwise Capital
 
-  // Location bonus
-  const locBonus = Math.min(locs * 0.08, 0.24);
-  const bestAdvance = monthly * (1.4 + locBonus);
+  // MCA advance = 100-120% of avg monthly deposits (standard underwriting)
+  // Location bonus: multi-location operators get slightly higher multiples
+  const locBonus = Math.min(locs * 0.05, 0.20);
+  const advanceLow  = monthly * 0.80;  // conservative (some lenders 50-80%)
+  const advanceBest = monthly * (1.0 + locBonus); // realistic best case
+  const advanceHigh = monthly * 1.20;  // aggressive lender, strong profile
 
   const targetAdvance = 1000000;
-  const lpShare = 500000;
-  const rollagramShare = 500000;
+  const qualifies = advanceBest >= targetAdvance * 0.90;
+  const marginal  = advanceBest >= targetAdvance * 0.60 && !qualifies;
 
-  const qualifies    = bestAdvance >= targetAdvance * 0.9;
-  const marginal     = bestAdvance >= targetAdvance * 0.65 && !qualifies;
-
-  // Repayment at 15% of daily revenue (250 business days)
-  const dailyRev      = rev / 250;
-  const dailyRepay    = dailyRev * 0.15;
-  const totalRepay    = targetAdvance * factorRate;
-  const repayDays     = Math.round(totalRepay / dailyRepay);
-  const repayMonths   = (repayDays / 21).toFixed(1);
+  // Daily repayment: holdback of 10-15% of daily revenue. Source: Mehmi Group, Advance Funds Network
+  const dailyRev   = monthly / 21; // ~21 business days per month
+  const holdback   = 0.12; // 12% holdback is midpoint of typical 10-15% range
+  const dailyRepay = dailyRev * holdback;
+  const totalRepay = targetAdvance * factorRate;
+  const repayDays  = Math.round(totalRepay / dailyRepay);
+  const repayMonths = (repayDays / 21).toFixed(1);
 
   // Verdict
   const vBox = document.getElementById('verdict-box');
